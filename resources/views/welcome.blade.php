@@ -39,11 +39,11 @@
                 </div>
                 <div id="menu-box"
                     class="absolute hidden top-20 left-0 shadow-lg bg-white pb-10 pl-5 pr-10 transition-opacity rounded-br-2xl">
-                    <div class="uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-5 mt-5">
+                    <div class="hidden uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-5 mt-5">
                         sobre nós</div>
-                    <div class="uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-5 mt-5">
+                    <div class="hidden uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-5 mt-5">
                         publicações</div>
-                    <div class="uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-5 mt-5">
+                    <div class="hidden uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-5 mt-5">
                         equipe
                     </div>
                     <div class="uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-5 mt-5">
@@ -51,7 +51,10 @@
                             contato
                         </a>
                     </div>
-                    <div class="mx-auto">
+                    <div class="uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-5 mt-5">
+                        página em construção!
+                    </div>
+                    {{-- <div class="mx-auto">
                         @if (Route::has('login'))
                         <div class="flex flex-wrap relative mt-5">
                             @auth
@@ -88,7 +91,7 @@
                             @endauth
                         </div>
                         @endif
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="flex-auto">
@@ -182,13 +185,13 @@
         <div class="lp-menu flex flex-wrap mx-auto mt-5">
             <img src="img/plant_right.png" alt="Plants" id="header-plant" class="hidden">
             <div
-                class="lp-menu-item uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-14 mt-5">
+                class="hidden lp-menu-item uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-14 mt-5">
                 sobre nós</div>
             <div
-                class="lp-menu-item uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-14 mt-5">
+                class="hidden lp-menu-item uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-14 mt-5">
                 publicações</div>
             <div
-                class="lp-menu-item uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-14 mt-5">
+                class="hidden lp-menu-item uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-14 mt-5">
                 equipe
             </div>
             <div class="lp-menu-item uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-14 mt-5">
@@ -196,7 +199,10 @@
                     contato
                 </a>
             </div>
-            <div class="mx-auto">
+            <div class="lp-menu-item uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-14 mt-5">
+                página em construção!
+            </div>
+            {{-- <div class="mx-auto">
                 @if (Route::has('login'))
                 <div class="flex flex-wrap relative mt-5">
                     @auth
@@ -233,7 +239,7 @@
                     @endauth
                 </div>
                 @endif
-            </div>
+            </div> --}}
         </div>
         <div id="menu-btn" x-data="{ open: true }">
             <button>
