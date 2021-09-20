@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://operageo.com.br'),
+    'url' => env('APP_URL', 'http://bioomiteca.com'),
 
     'asset_url' => env('ASSET_URL', null),
 
