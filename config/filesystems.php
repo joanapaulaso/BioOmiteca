@@ -44,18 +44,18 @@ return [
 
         'spectra' => [
             'driver' => 'ftp',
-            'host' => 'ftp.operageo1.hospedagemdesites.ws',
-            'username' => 'operageo1',
-            'password' => '!BH_Chessed.18!',
+            'host' => '	ftp://joanapaulasoliveira.com',
+            'username' => 'u937685253.bioomiteca.com',
+            'password' => 'xhsa*&Y#W[3',
             'port' => 21,
             'root' => '/public_html',
         ],
 
         'maps' => [
             'driver' => 'ftp',
-            'host' => 'ftp.operageo1.hospedagemdesites.ws',
-            'username' => 'operageo1',
-            'password' => '!BH_Chessed.18!',
+            'host' => '	ftp://joanapaulasoliveira.com',
+            'username' => 'u937685253.bioomiteca.com',
+            'password' => 'xhsa*&Y#W[3',
             'port' => 21,
             'root' => '/public_html',
         ],
