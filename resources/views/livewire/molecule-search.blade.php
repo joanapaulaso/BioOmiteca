@@ -1,0 +1,97 @@
+<div class="overflow-y-scroll w-full mt-16 px-2 overflow-x-hidden lg:px-10">
+    <div class="mt-5 mx-2">
+        <div class="w-11/12 mx-1">
+            <label for="search" class="text-md font-medium text-left text-gray-700">
+                Nome ou massa da molécula:
+            </label>
+            <input id="search" type="text" wire:model="searchMol" onfocus="this.value=''" placeholder="Digite o termo da busca"
+                class="w-full mt-2 border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
+        </div>
+        <div class="mx-1 mt-2">
+            <label for="per-page" class="text-md font-medium text-left text-gray-700 mb-2">
+                Resultados por página:
+            </label>
+            <select id="per-page" wire:model='perPage'
+                class="border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
+                <option class="text-sm">5</option>
+                <option class="text-sm">10</option>
+                <option class="text-sm">20</option>
+                <option class="text-sm">30</option>
+            </select>
+        </div>
+    </div>
+    <div class="w-full mt-8 m-3 white rounded-md text-left">
+        <p class="flex text-2xl font-light text-left text-gray-700 p-0 lg:p-3 mb-3 uppercase">
+            Resultado da busca
+        </p>
+        <div class="flex flex-col mr-7">
+            <div class="-my-2">
+                <div class="w-full px-0 lg:px-3 py-2 align-middle inline-block">
+                    <div class="w-full shadow-lg mb-5 overflow-hidden border-b border-gray-200 rounded-lg overflow-x-scroll">
+                        <table class="w-full lg:overflow-x-auto search-mol-responsive_table">
+                            <thead class="bg-blue-200">
+                                <tr>
+                                    <th scope="col"
+                                        class="px-6 py-3 text-center text-xs font-medium text-gray-600 uppercase tracking-wider">
+                                        ID</th>
+                                    <th scope="col"
+                                        class="px-6 py-3 text-center text-xs font-medium text-gray-600 uppercase tracking-wider">
+                                        Molécula</th>
+                                    <th scope="col"
+                                        class="px-6 py-3 text-center text-xs font-medium text-gray-600 uppercase tracking-wider">
+                                        Espécie</th>
+                                    <th scope="col" class="hidden">Projeto</th>
+                                    <th scope="col"
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
+                                        Fórmula</th>
+                                    <th scope="col" class="hidden">Espectro</th>
+                                    <th scope="col"
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
+                                        Massa molecular</th>
+                                    <th scope="col"
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($molecules as $molecule)
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm text-center leading-5">
+                                            {{ $molecule->id_molecula }}</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm text-center leading-5">
+                                            {{ $molecule->nome_molecula }}</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm leading-5">
+                                            {{ $molecule->especie }}</td>
+                                        <td class="hidden">{{ $molecule->nome_projeto }}</td>
+                                        <td class="hidden">{{ $molecule->aplicabilidade }}</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm leading-5">
+                                            {{ $molecule->formula }}</td>
+                                        <td class="hidden">{{ $molecule->espectro }}</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm leading-5">
+                                            {{ $molecule->massa }}</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-no-wrap border-b text-gray-800 border-gray-200 text-sm leading-5">
+                                            <a href="/mol/{{ $molecule->id_molecula }}">
+                                                <button class="flex p-3 rounded-lg bg-green-400 font-semibold text-xs uppercase text-center tracking-wider focus:outline-none focus:ring-2 focus:ring-green-500">
+                                                    Visualizar espectro
+                                                </button>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                    {{ $molecules->links() }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
