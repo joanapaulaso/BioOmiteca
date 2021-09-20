@@ -82,3 +82,5 @@ Route::get('molecule-search', function () {
 Route::get('mol/{id_molecula}', function (Request $request) {
     return view('layouts.mol-page');
 })->name('mol-page');
+
+Route::post('contato/send', [ContatoController::class, 'send']);
