@@ -54,7 +54,7 @@
                     <div class="uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-5 mt-5">
                         página em construção!
                     </div>
-                    <div class="mx-auto">
+                    {{-- <div class="mx-auto">
                         @if (Route::has('login'))
                         <div class="flex flex-wrap relative mt-5">
                             @auth
@@ -91,7 +91,7 @@
                             @endauth
                         </div>
                         @endif
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="flex-auto">
@@ -202,7 +202,7 @@
             <div class="lp-menu-item uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-14 mt-5">
                 página em construção!
             </div>
-            <div class="mx-auto">
+            {{-- <div class="mx-auto">
                 @if (Route::has('login'))
                 <div class="flex flex-wrap relative mt-5">
                     @auth
@@ -239,7 +239,7 @@
                     @endauth
                 </div>
                 @endif
-            </div>
+            </div> --}}
         </div>
         <div id="menu-btn" x-data="{ open: true }">
             <button>
