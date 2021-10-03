@@ -71,6 +71,10 @@ Route::get('curadoria', function () {
     return view('layouts.curadoria');
 })->name('curadoria');
 
+Route::get('sistema-admin', function () {
+    return view('layouts.sistema-admin');
+})->name('sistema-admin');
+
 Route::get('user-profile', function () {
     return view('layouts.user-profile');
 })->name('user-profile');
@@ -78,6 +82,10 @@ Route::get('user-profile', function () {
 Route::get('molecule-search', function () {
     return view('layouts.molecule-search');
 })->name('molecule-search');
+
+Route::get('user/{id}', function (Request $request) {
+    return view('layouts.user-page');
+})->name('user-page');
 
 Route::get('mol/{id_molecula}', function (Request $request) {
     return view('layouts.mol-page');
