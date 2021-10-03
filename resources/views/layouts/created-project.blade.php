@@ -23,6 +23,9 @@
     <div class="static flex flex-wrap m-auto">
         @include('layouts.cabecalho')
         <div class="flex w-full">
+            <aside class="relative bg-gray-100">
+                @include('layouts.menu')
+            </aside>
             <main class="relative w-full bg-white">
                 @livewire('created-project')
             </main>

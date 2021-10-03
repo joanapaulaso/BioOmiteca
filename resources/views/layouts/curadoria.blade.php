@@ -24,13 +24,16 @@
     <div class="static flex flex-wrap m-auto overflow-x-hidden">
         @include('layouts.cabecalho')
         <div class="flex w-full">
+            <aside class="relative bg-gray-100">
+                @include('layouts.menu')
+            </aside>
             @if(Auth::user()->is_admin == 1)
-            <main class="relative w-full">
+            <main class="relative w-full bg-white">
                 @livewire('curadoria')
             </main>
             @endif
             @if(Auth::user()->is_admin == 0)
-            <main class="relative w-full">
+            <main class="relative w-full bg-white">
                 @livewire('created-project')
             </main>
             @endif
