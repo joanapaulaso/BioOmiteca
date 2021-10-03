@@ -22,8 +22,6 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
-
-
             <div>
                 <x-jet-input id="is_admin" type="hidden" name="is_admin" :value="0" required />
             </div>
