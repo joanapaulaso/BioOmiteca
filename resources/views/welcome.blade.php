@@ -54,7 +54,7 @@
                     <div class="uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-5 mt-5">
                         página em construção!
                     </div>
-                    {{-- <div class="mx-auto">
+                    <div class="mx-auto">
                         @if (Route::has('login'))
                         <div class="flex flex-wrap relative mt-5">
                             @auth
@@ -91,7 +91,7 @@
                             @endauth
                         </div>
                         @endif
-                    </div> --}}
+                    </div>
                 </div>
             </div>
             <div class="flex-auto">
@@ -183,7 +183,7 @@
             </div>
         </div>
         <div class="lp-menu flex flex-wrap mx-auto mt-5">
-            <img src="img/plant_right.png" alt="Plants" id="header-plant" class="hidden">
+            <img src="{{ url('images/plant_right.png') }}" alt="Plants" id="header-plant" class="hidden">
             <div
                 class="hidden lp-menu-item uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-14 mt-5">
                 sobre nós</div>
@@ -202,7 +202,7 @@
             <div class="lp-menu-item uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-14 mt-5">
                 página em construção!
             </div>
-            {{-- <div class="mx-auto">
+            <div class="mx-auto">
                 @if (Route::has('login'))
                 <div class="flex flex-wrap relative mt-5">
                     @auth
@@ -239,7 +239,7 @@
                     @endauth
                 </div>
                 @endif
-            </div> --}}
+            </div>
         </div>
         <div id="menu-btn" x-data="{ open: true }">
             <button>
@@ -251,10 +251,10 @@
     </section>
     <!-- Section 2 -->
     <section id="section-2" class="relative block lg:flex lg:flex-wrap mx-auto mt-28">
-        <img src="img/plant_right.png" alt="Flower" id="plant-right" class="invisible lg:visible h-0 lg:h-auto">
-        <img src="img/plant_left.png" alt="Flower" id="plant-left" class="invisible lg:visible h-0 lg:h-auto">
-        <img src="img/stalk-h.png" alt="Flower" id="stalk-h1" class="invisible lg:visible h-0 lg:h-auto">
-        <img src="img/ma-background.png" alt="Fundo" id="fundo" class="rellax" data-rellax-speed="5"
+        <img src="{{ url('images/plant_right.png') }}" alt="Flower" id="plant-right" class="invisible lg:visible h-0 lg:h-auto">
+        <img src="{{ url('images/plant_left.png') }}" alt="Flower" id="plant-left" class="invisible lg:visible h-0 lg:h-auto">
+        <img src="{{ url('images/stalk-h.png') }}" alt="Flower" id="stalk-h1" class="invisible lg:visible h-0 lg:h-auto">
+        <img src="{{ url('images/ma-background.png') }}" alt="Fundo" id="fundo" class="rellax" data-rellax-speed="5"
             class="invisible lg:visible">
         <div class="flex-1" id="section-2-1">
             <div class="mt-14 -mr-14">
@@ -298,11 +298,11 @@
                         paint-order="stroke fill markers" />
                 </svg>
                 <video autoplay playsinline muted loop preload id="ma-video">
-                    <source src="img/ma-video.mp4">
+                    <source src="{{ url('images/ma-video.mp4') }}">
                 </video>
-                <img src="img/mol1.png" alt="mol1" class="absolute z-10 flex mol1 w-20 top-10/100 right-40/100">
-                <img src="img/mol2.png" alt="mol2" class="absolute z-10 flex mol2 w-20 top-50/100 right-50/100">
-                <img src="img/mol3.png" alt="mol3" class="absolute z-10 flex mol3 w-20 top-20/100 right-70/100">
+                <img src="{{ url('images/mol1.png') }}" alt="mol1" class="absolute z-10 flex mol1 w-20 top-10/100 right-40/100">
+                <img src="{{ url('images/mol2.png') }}" alt="mol2" class="absolute z-10 flex mol2 w-20 top-50/100 right-50/100">
+                <img src="{{ url('images/mol3.png') }}" alt="mol3" class="absolute z-10 flex mol3 w-20 top-20/100 right-70/100">
             </div>
         </div>
 
