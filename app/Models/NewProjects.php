@@ -23,5 +23,7 @@ class NewProjects extends Model
         'instituicao',
         'coordenacao',
         'financiamento',
+        'experimento',
+        'repositorio',
     ];
 }
