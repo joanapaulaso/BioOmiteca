@@ -122,7 +122,7 @@
                 </div>
             </div>
             @endif
-            {{--  Metabolômica Default  --}}
+            {{--  Metabolômica First  --}}
             @if($step == 1)
             <div class="flex z-0 mt-16">
                 <div class="w-full m-5 rounded-md text-left">

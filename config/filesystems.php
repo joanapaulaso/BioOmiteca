@@ -94,9 +94,7 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
-        public_path('experimento') => storage_path('app/experimento'),
         public_path('spectra') => storage_path('app/spectra'),
-        public_path('maps') => storage_path('app/maps'),
     ],
 
 ];
