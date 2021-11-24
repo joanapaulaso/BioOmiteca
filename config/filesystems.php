@@ -42,7 +42,7 @@ return [
             'visibility' => 'public',
         ],
 
-        'experimento' => [
+        'spectra' => [
             'driver' => 'ftp',
             'host' => '	ftp://joanapaulasoliveira.com',
             'username' => 'u937685253.bioomiteca.com',
@@ -51,7 +51,7 @@ return [
             'root' => '/public_html',
         ],
 
-        'spectra' => [
+        'experimento' => [
             'driver' => 'ftp',
             'host' => '	ftp://joanapaulasoliveira.com',
             'username' => 'u937685253.bioomiteca.com',
