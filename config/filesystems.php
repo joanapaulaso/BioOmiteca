@@ -51,15 +51,6 @@ return [
             'root' => '/public_html',
         ],
 
-        'experimento' => [
-            'driver' => 'ftp',
-            'host' => '	ftp://joanapaulasoliveira.com',
-            'username' => 'u937685253.bioomiteca.com',
-            'password' => 'xhsa*&Y#W[3',
-            'port' => 21,
-            'root' => '/public_html',
-        ],
-
         'maps' => [
             'driver' => 'ftp',
             'host' => '	ftp://joanapaulasoliveira.com',

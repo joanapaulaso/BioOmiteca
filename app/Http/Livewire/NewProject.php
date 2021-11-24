@@ -31,8 +31,6 @@ class NewProject extends Component
     public $instituicao;
     public $coordenacao;
     public $financiamento;
-    public $repositorio;
-    public $experimento;
     public $nome_molecula;
     public $formula;
     public $massa;
@@ -84,8 +82,6 @@ class NewProject extends Component
             'name' => 'required|min:4',
         ]);*/
 
-        $experimento_storagePath  = Storage::disk('experimento')->getDriver()->getAdapter()->getPathPrefix() . "experimento/";
-
         if ($this->project) {
             $this->project= tap($this->project)->update([
 
@@ -101,8 +97,6 @@ class NewProject extends Component
                 'instituicao' => $this->instituicao,
                 'coordenacao' => $this->coordenacao,
                 'financiamento' => $this->financiamento,
-                'repositorio' => $this->repositorio,
-                'experimento' => $this->experimento->hashName(),
 
                 ]);
 
@@ -124,8 +118,6 @@ class NewProject extends Component
                 'instituicao' => $this->instituicao,
                 'coordenacao' => $this->coordenacao,
                 'financiamento' => $this->financiamento,
-                'repositorio' => $this->repositorio,
-                'experimento' => $this->experimento->hashName(),
 
                 ]);
 

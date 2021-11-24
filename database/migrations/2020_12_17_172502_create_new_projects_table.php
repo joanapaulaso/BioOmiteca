@@ -26,8 +26,6 @@ class CreateNewProjectsTable extends Migration
             $table->string('instituicao')->nullable();
             $table->string('coordenacao')->nullable();
             $table->string('financiamento')->nullable();
-            $table->string('repositorio')->nullable();
-            $table->string('experimento')->nullable();
             $table->timestamps();
         });
     }
