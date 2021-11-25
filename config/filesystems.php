@@ -42,42 +42,49 @@ return [
             'visibility' => 'public',
         ],
 
-        'experimento' => [
-            'driver' => 'ftp',
-            'host' => '	ftp://joanapaulasoliveira.com',
-            'username' => 'u937685253.bioomiteca.com',
-            'password' => 'xhsa*&Y#W[3',
-            'port' => 21,
-            'root' => '/public_html',
+        'espectro' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/espectro'),
+            'url' => env('APP_URL').'/espectro',
+            'visibility' => 'public',
         ],
 
-        'spectra' => [
-            'driver' => 'ftp',
-            'host' => '	ftp://joanapaulasoliveira.com',
-            'username' => 'u937685253.bioomiteca.com',
-            'password' => 'xhsa*&Y#W[3',
-            'port' => 21,
-            'root' => '/public_html',
-        ],
+        // 'experimento' => [
+        //     'driver' => 'ftp',
+        //     'host' => '	ftp://joanapaulasoliveira.com',
+        //     'username' => 'u937685253.bioomiteca.com',
+        //     'password' => 'xhsa*&Y#W[3',
+        //     'port' => 21,
+        //     'root' => '/public_html',
+        // ],
 
-        'maps' => [
-            'driver' => 'ftp',
-            'host' => '	ftp://joanapaulasoliveira.com',
-            'username' => 'u937685253.bioomiteca.com',
-            'password' => 'xhsa*&Y#W[3',
-            'port' => 21,
-            'root' => '/public_html',
-        ],
+        // 'spectra' => [
+        //     'driver' => 'ftp',
+        //     'host' => '	ftp://joanapaulasoliveira.com',
+        //     'username' => 'u937685253.bioomiteca.com',
+        //     'password' => 'xhsa*&Y#W[3',
+        //     'port' => 21,
+        //     'root' => '/public_html',
+        // ],
 
-        's3' => [
-            'driver' => 's3',
-            'key' => env('AWS_ACCESS_KEY_ID'),
-            'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            'region' => env('AWS_DEFAULT_REGION'),
-            'bucket' => env('AWS_BUCKET'),
-            'url' => env('AWS_URL'),
-            'endpoint' => env('AWS_ENDPOINT'),
-        ],
+        // 'maps' => [
+        //     'driver' => 'ftp',
+        //     'host' => '	ftp://joanapaulasoliveira.com',
+        //     'username' => 'u937685253.bioomiteca.com',
+        //     'password' => 'xhsa*&Y#W[3',
+        //     'port' => 21,
+        //     'root' => '/public_html',
+        // ],
+
+        // 's3' => [
+        //     'driver' => 's3',
+        //     'key' => env('AWS_ACCESS_KEY_ID'),
+        //     'secret' => env('AWS_SECRET_ACCESS_KEY'),
+        //     'region' => env('AWS_DEFAULT_REGION'),
+        //     'bucket' => env('AWS_BUCKET'),
+        //     'url' => env('AWS_URL'),
+        //     'endpoint' => env('AWS_ENDPOINT'),
+        // ],
 
     ],
 
@@ -94,9 +101,7 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
-        public_path('spectra') => storage_path('app/spectra'),
-        public_path('experimento') => storage_path('app/experimento'),
-        public_path('maps') => storage_path('app/maps'),
+        public_path('espectro') => storage_path('app/public/espectro'),
     ],
 
 ];

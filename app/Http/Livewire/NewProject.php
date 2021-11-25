@@ -9,6 +9,7 @@ use App\Models\NewMolecules;
 use App\Models\Spectra;
 use App\Models\NewMaps;
 use App\Http\Livewire\Field;
+use App\Http\Livewire\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
@@ -83,6 +84,7 @@ class NewProject extends Component
         /*$this->validate([
             'name' => 'required|min:4',
         ]);*/
+        //$experimento_storagePath  = Storage::disk('public')->getDriver()->getAdapter()->getPathPrefix() . "experimento/";
 
         if ($this->project) {
             $this->project= tap($this->project)->update([
@@ -99,12 +101,10 @@ class NewProject extends Component
                 'instituicao' => $this->instituicao,
                 'coordenacao' => $this->coordenacao,
                 'financiamento' => $this->financiamento,
-                'financiamento' => $this->repositorio,
-                'financiamento' => $this->experimento->hashName(),
+                'repositorio' => $this->repositorio,
+                'experimento' => Storage::disk('public')->put($this->experimento->hashName(), "experimentos"),
 
                 ]);
-
-            session()->flash('message', 'project successfully updated.');
 
         } else {
 
@@ -122,12 +122,10 @@ class NewProject extends Component
                 'instituicao' => $this->instituicao,
                 'coordenacao' => $this->coordenacao,
                 'financiamento' => $this->financiamento,
-                'financiamento' => $this->repositorio,
-                'financiamento' => $this->experimento->hashName(),
+                'repositorio' => $this->repositorio,
+                'experimento' => $this->experimento->hashName(),
 
                 ]);
-
-            session()->flash('message', 'Project successfully created.');
 
         }
 
@@ -157,12 +155,13 @@ class NewProject extends Component
 
                 ]);
 
-            $mol_path = $this->espectro[$key]->hashName();
-            $mol_localpath = $this->espectro[$key]->storeAs('spectra', $mol_path);
-            $mol_publicpath= asset($mol_localpath);
+            $mol_name = $this->espectro[$key]->hashName();
+            $mol_localpath = $this->espectro[$key]->storeAs('espectro', $mol_name);
+            $mol_publicpath = asset($mol_localpath);
+            // dd($mol_publicpath);
 
             $a = 0;
-            $files = fopen("spectra/" . $this->espectro[$key]->hashName(), "r");
+            $files = fopen(asset($mol_publicpath), "r");
             while(!feof($files)) {
                 $content = fgets($files);
                 $carray = explode(",", $content);

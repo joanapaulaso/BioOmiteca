@@ -185,7 +185,7 @@
                                     <div class="mb-2">
                                         <label for="espectro" class="font-thin">Arquivo do espectro de massas (.txt)</label>
                                     </div>
-                                    <div class="w-48 h-10 p-0 mx-1 items-center transition duration-1000 ease-in-out bg-blue-200 hover:bg-blue-500 hover:text-white text-sm cursor-pointer rounded-md">
+                                    <div class="w-48 h-10 p-0 mx-1 items-center transition duration-500 ease-in-out bg-blue-200 hover:bg-blue-500 hover:text-white text-sm cursor-pointer rounded-md">
                                         <input type="file" wire:model="espectro.0" class="absolute block w-48 h-10 opacity-0 flex-row items-center cursor-pointer">
                                         <button class="flex cursor-pointer items-center m-2">
                                             <svg class="cursor-pointer w-6 h-6 mr-2 mt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -198,7 +198,7 @@
                                 </div>
                             </div>
                             <div class="flex flex-grow float-left top-0 mt-3 mb-1 my-1 p-3 w-full items-center">
-                                <button wire:click.prevent="add({{$i}})" class="transition duration-1000 ease-in flex gap-2 items-center p-3 bg-blue-200 hover:bg-green-200 focus:outline-none rounded-md">
+                                <button wire:click.prevent="add({{$i}})" class="transition duration-500 ease-in flex gap-2 items-center p-3 bg-blue-200 hover:bg-green-200 focus:outline-none rounded-md">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z" clip-rule="evenodd" />
                                     </svg>
@@ -276,7 +276,7 @@
                                     <div class="mb-2">
                                         <label for="espectro" class="font-thin">Arquivo do espectro de massas (.txt)</label>
                                     </div>
-                                    <div class="w-48 h-10 p-0 mx-1 items-center transition duration-1000 ease-in-out bg-blue-200 hover:bg-blue-500 hover:text-white text-sm cursor-pointer rounded-md">
+                                    <div class="w-48 h-10 p-0 mx-1 items-center transition duration-500 ease-in-out bg-blue-200 hover:bg-blue-500 hover:text-white text-sm cursor-pointer rounded-md">
                                         <input type="file" wire:model="espectro.{{ $value }}" class="absolute block w-48 h-10 opacity-0 flex-row items-center cursor-pointer">
                                         <button class="flex cursor-pointer items-center m-2">
                                             <svg class="cursor-pointer w-6 h-6 mr-2 mt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -290,7 +290,7 @@
                             </div>
                             <div class="md:flex md:w-full">
                                 <div class="flex top-0 mt-3 mb-1 my-1 p-3 items-center">
-                                    <button wire:click.prevent="add({{$i}})" class="gap-2 transition duration-1000 ease-in flex items-center p-3 bg-blue-200 hover:bg-green-200 focus:outline-none rounded-md">
+                                    <button wire:click.prevent="add({{$i}})" class="gap-2 transition duration-500 ease-in flex items-center p-3 bg-blue-200 hover:bg-green-200 focus:outline-none rounded-md">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                             <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z" clip-rule="evenodd" />
                                         </svg>
@@ -299,7 +299,7 @@
 
                                 </div>
                                 <div class="flex top-0 mt-3 mb-1 my-1 p-3 items-center">
-                                    <button href="#" wire:click.prevent="remove({{$key}})" class="flex gap-2 transition duration-1000 ease-in p-3 bg-blue-200 hover:bg-green-200 focus:outline-none rounded-md ">
+                                    <button href="#" wire:click.prevent="remove({{$key}})" class="flex gap-2 transition duration-500 ease-in p-3 bg-blue-200 hover:bg-green-200 focus:outline-none rounded-md ">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                             <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm1 8a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
                                         </svg>
@@ -341,7 +341,7 @@
                             <div class="mb-2">
                                 <label for="mapa" class="font-thin">Arquivo do mapa de modelagem ecológica</label>
                             </div>
-                            <div class="w-48 h-10 p-0 mx-1 items-center transition duration-1000 ease-in-out bg-blue-200 hover:bg-blue-500 hover:text-white text-sm cursor-pointer rounded-md">
+                            <div class="w-48 h-10 p-0 mx-1 items-center transition duration-500 ease-in-out bg-blue-200 hover:bg-blue-500 hover:text-white text-sm cursor-pointer rounded-md">
                                 <input type="file" wire:model="mapa" class="absolute block w-48 h-10 opacity-0 flex-row items-center cursor-pointer">
                                 <button class="flex cursor-pointer items-center m-2">
                                     <svg class="cursor-pointer w-6 h-6 mr-2 mt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -379,7 +379,7 @@
         <div class="mt-2 ml-10 flex gap-2">
 
             @if($step > 0 && $step <= 2)
-            <button type="button" wire:click="decreaseStep" class="flex gap-2 transition duration-1000 ease-in p-3 mb-5 bg-blue-200 hover:bg-green-200 rounded-md">
+            <button type="button" wire:click="decreaseStep" class="flex gap-2 transition duration-500 ease-in p-3 mb-5 bg-blue-200 hover:bg-green-200 rounded-md">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
                 </svg>
@@ -388,7 +388,7 @@
             @endif
 
             @if($step <= 2)
-            <button type="submit" class="flex gap-2 transition duration-1000 ease-in p-3 mb-5 bg-blue-200 hover:bg-green-200 rounded-md">
+            <button type="submit" class="flex gap-2 transition duration-500 ease-in p-3 mb-5 bg-blue-200 hover:bg-green-200 rounded-md">
                 Próximo
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
