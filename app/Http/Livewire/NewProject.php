@@ -158,7 +158,6 @@ class NewProject extends Component
             $mol_name = $this->espectro[$key]->hashName();
             $mol_localpath = $this->espectro[$key]->storeAs('espectro', $mol_name);
             $mol_publicpath = asset($mol_localpath);
-            // dd($mol_publicpath);
 
             $a = 0;
             $files = fopen(asset($mol_publicpath), "r");
