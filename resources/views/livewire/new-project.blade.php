@@ -92,6 +92,32 @@
                                 @error('financiamento') <p class="text-red-600 text-sm"><br>{{ $message }}</p> @enderror
                             </div>
                         </div>
+                        <div class="md:flex md:w-full">
+                            <div class="flex-grow top-0 md:mx-5 my-1 md:p-3 w-full md:w-2/3">
+                                <div class="mb-2">
+                                    <label for="repositorio" class="font-thin">Repositorio</label>
+                                </div>
+                                <div class="mx-1">
+                                    <input type="text" wire:model="repositorio" maxlength="100" class="w-full mb-4 border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
+                                </div>
+                                @error('repositorio') <p class="text-red-600 text-sm"><br>{{ $message }}</p> @enderror
+                            </div>
+                            <div class="flex-grow top-0 md:mx-5 my-1 md:p-3 w-full md:w-2/3">
+                                <div class="mb-2">
+                                    <label for="experimento" class="font-thin">Arquivo dos metadados do experimento (.csv)</label>
+                                </div>
+                                <div class="w-48 h-10 p-0 mx-1 items-center transition duration-500 ease-in-out bg-blue-200 hover:bg-blue-500 hover:text-white text-sm cursor-pointer rounded-md">
+                                    <input type="file" wire:model="experimento" class="absolute block w-48 h-10 opacity-0 flex-row items-center cursor-pointer">
+                                    <button class="flex cursor-pointer items-center m-2">
+                                        <svg class="cursor-pointer w-6 h-6 mr-2 mt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                        Selecione um arquivo
+                                    </button>
+                                </div>
+                                @error('experimento') <p class="text-red-600 text-sm"><br>{{ $message }}</p> @enderror
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

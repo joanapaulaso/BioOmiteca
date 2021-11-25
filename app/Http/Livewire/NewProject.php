@@ -31,6 +31,8 @@ class NewProject extends Component
     public $instituicao;
     public $coordenacao;
     public $financiamento;
+    public $repositorio;
+    public $experimento;
     public $nome_molecula;
     public $formula;
     public $massa;
@@ -97,6 +99,8 @@ class NewProject extends Component
                 'instituicao' => $this->instituicao,
                 'coordenacao' => $this->coordenacao,
                 'financiamento' => $this->financiamento,
+                'financiamento' => $this->repositorio,
+                'financiamento' => $this->experimento->hashName(),
 
                 ]);
 
@@ -118,6 +122,8 @@ class NewProject extends Component
                 'instituicao' => $this->instituicao,
                 'coordenacao' => $this->coordenacao,
                 'financiamento' => $this->financiamento,
+                'financiamento' => $this->repositorio,
+                'financiamento' => $this->experimento->hashName(),
 
                 ]);
 

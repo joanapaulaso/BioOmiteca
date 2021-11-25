@@ -42,6 +42,15 @@ return [
             'visibility' => 'public',
         ],
 
+        'experimento' => [
+            'driver' => 'ftp',
+            'host' => '	ftp://joanapaulasoliveira.com',
+            'username' => 'u937685253.bioomiteca.com',
+            'password' => 'xhsa*&Y#W[3',
+            'port' => 21,
+            'root' => '/public_html',
+        ],
+
         'spectra' => [
             'driver' => 'ftp',
             'host' => '	ftp://joanapaulasoliveira.com',
@@ -86,6 +95,8 @@ return [
     'links' => [
         public_path('storage') => storage_path('app/public'),
         public_path('spectra') => storage_path('app/spectra'),
+        public_path('experimento') => storage_path('app/experimento'),
+        public_path('maps') => storage_path('app/maps'),
     ],
 
 ];
