@@ -43,7 +43,7 @@ return [
         ],
 
         'espectro' => [
-            'root' => storage_path('app/public/espectro'),
+            'root' => '/public_html',
             'url' => env('APP_URL').'/espectro',
             'visibility' => 'public',
             'driver' => 'ftp',
