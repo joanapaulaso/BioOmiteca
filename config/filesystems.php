@@ -43,14 +43,12 @@ return [
         ],
 
         'espectro' => [
-            'root' => '/public_html',
-            'url' => env('APP_URL').'/espectro',
-            'visibility' => 'public',
             'driver' => 'ftp',
             'host' => '	ftp://joanapaulasoliveira.com',
             'username' => 'u937685253.bioomiteca.com',
             'password' => 'xhsa*&Y#W[3',
             'port' => 21,
+            'root' => '/public_html',
         ],
 
         // 'experimento' => [
@@ -105,7 +103,7 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
-        public_path('espectro') => storage_path('app/public/espectro'),
+        public_path('espectro') => storage_path('app/espectro'),
     ],
 
 ];
