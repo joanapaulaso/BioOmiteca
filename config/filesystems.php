@@ -51,42 +51,15 @@ return [
             'root' => '/public_html',
         ],
 
-        // 'experimento' => [
-        //     'driver' => 'ftp',
-        //     'host' => '	ftp://joanapaulasoliveira.com',
-        //     'username' => 'u937685253.bioomiteca.com',
-        //     'password' => 'xhsa*&Y#W[3',
-        //     'port' => 21,
-        //     'root' => '/public_html',
-        // ],
-
-        // 'spectra' => [
-        //     'driver' => 'ftp',
-        //     'host' => '	ftp://joanapaulasoliveira.com',
-        //     'username' => 'u937685253.bioomiteca.com',
-        //     'password' => 'xhsa*&Y#W[3',
-        //     'port' => 21,
-        //     'root' => '/public_html',
-        // ],
-
-        // 'maps' => [
-        //     'driver' => 'ftp',
-        //     'host' => '	ftp://joanapaulasoliveira.com',
-        //     'username' => 'u937685253.bioomiteca.com',
-        //     'password' => 'xhsa*&Y#W[3',
-        //     'port' => 21,
-        //     'root' => '/public_html',
-        // ],
-
-        // 's3' => [
-        //     'driver' => 's3',
-        //     'key' => env('AWS_ACCESS_KEY_ID'),
-        //     'secret' => env('AWS_SECRET_ACCESS_KEY'),
-        //     'region' => env('AWS_DEFAULT_REGION'),
-        //     'bucket' => env('AWS_BUCKET'),
-        //     'url' => env('AWS_URL'),
-        //     'endpoint' => env('AWS_ENDPOINT'),
-        // ],
+        's3' => [
+            'driver' => 's3',
+            'key' => env('AWS_ACCESS_KEY_ID'),
+            'secret' => env('AWS_SECRET_ACCESS_KEY'),
+            'region' => env('AWS_DEFAULT_REGION'),
+            'bucket' => env('AWS_BUCKET'),
+            'url' => env('AWS_URL'),
+            'endpoint' => env('AWS_ENDPOINT'),
+        ],
 
     ],
 
