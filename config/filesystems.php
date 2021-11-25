@@ -43,10 +43,14 @@ return [
         ],
 
         'espectro' => [
-            'driver' => 'local',
             'root' => storage_path('app/public/espectro'),
             'url' => env('APP_URL').'/espectro',
             'visibility' => 'public',
+            'driver' => 'ftp',
+            'host' => '	ftp://joanapaulasoliveira.com',
+            'username' => 'u937685253.bioomiteca.com',
+            'password' => 'xhsa*&Y#W[3',
+            'port' => 21,
         ],
 
         // 'experimento' => [
