@@ -186,12 +186,12 @@
                 </button>
                 {{-- Dropdown Body Profile --}}
                 <div x-show.transition="open" x-on:click.away="open = false" class="absolute right-0 w-36 mt-2 text-center bg-white border-2 border-blue-400 rounded-lg shadow-xl cabecalho__responsive--menuRight">
-                    <a href="{{ route('user-profile') }}" class="transition-colors duration-300 block px-4 py-4 text-xs rounded-tr-lg rounded-tl-lg uppercase font-semibold hover:bg-blue-200 tracking-widest">
+                    {{-- <a href="{{ route('user-profile') }}" class="transition-colors duration-300 block px-4 py-4 text-xs rounded-tr-lg rounded-tl-lg uppercase font-semibold hover:bg-blue-200 tracking-widest">
                         Editar perfil
                     </a>
                     <a href="{{ route('my-projects') }}" class="transition-colors duration-300 block px-4 py-4 text-xs uppercase font-semibold hover:bg-blue-200 tracking-widest">
                         Meus projetos
-                    </a>
+                    </a> --}}
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <a href="{{ route('logout') }}"
