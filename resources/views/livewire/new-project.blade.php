@@ -58,7 +58,7 @@
                                     <label for="resumo" class="font-thin">Resumo do projeto</label>
                                 </div>
                                 <div class="mx-1">
-                                    <textarea wire:model="resumo" maxlength="100" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md"></textarea>
+                                    <textarea wire:model="resumo" maxlength="1000" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md"></textarea>
                                 </div>
                                 @error('resumo') <p class="text-red-600 text-sm"><br>{{ $message }}</p> @enderror
                             </div>
@@ -164,7 +164,7 @@
                             <div class="md:flex md:w-full">
                                 <div class="flex-grow top-0 md:mx-5 my-1 md:p-3 w-full md:w-2/3">
                                     <div class="mb-2">
-                                        <label for="massa" class="font-thin">Massa monoisotópica</label>
+                                        <label for="massa" class="font-thin">Massa molecular (m/z)</label>
                                     </div>
                                     <div class="mx-1">
                                         <input type="text" wire:model="massa.0" maxlength="100" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
@@ -187,7 +187,7 @@
                                         <label for="aplicabilidade" class="font-thin">Aplicabilidade da molécula</label>
                                     </div>
                                     <div class="mx-1">
-                                        <input type="text" wire:model="aplicabilidade.0" maxlength="100" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
+                                        <input type="text" wire:model="aplicabilidade.0" maxlength="1000" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
                                     </div>
                                     @error('aplicabilidade') <p class="text-red-600 text-sm"><br>{{ $message }}</p> @enderror
                                 </div>
@@ -274,7 +274,7 @@
                             <div class="md:flex md:w-full">
                                 <div class="flex-grow top-0 md:mx-5 my-1 md:p-3 w-full md:w-2/3">
                                     <div class="mb-2">
-                                        <label for="massa" class="font-thin">Massa monoisotópica</label>
+                                        <label for="massa" class="font-thin">Massa molecular (m/z)</label>
                                     </div>
                                     <div class="mx-1">
                                         <input type="text" wire:model="massa.{{ $value }}" maxlength="100" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
@@ -297,7 +297,7 @@
                                         <label for="aplicabilidade" class="font-thin">Aplicabilidade da molécula</label>
                                     </div>
                                     <div class="mx-1">
-                                        <input type="text" wire:model="aplicabilidade.{{ $value }}" maxlength="100" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
+                                        <input type="text" wire:model="aplicabilidade.{{ $value }}" maxlength="1000" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
                                     </div>
                                     @error('aplicabilidade') <p class="text-red-600 text-sm"><br>{{ $message }}</p> @enderror
                                 </div>
@@ -415,7 +415,7 @@
                                 <label for="mapa_desc" class="font-thin">Descrição resumida da modelagem ecológica</label>
                             </div>
                             <div class="mx-1">
-                                <textarea wire:model="mapa_desc" maxlength="100" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md"></textarea>
+                                <textarea wire:model="mapa_desc" maxlength="1000" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md"></textarea>
                             </div>
                             @error('mapa_desc') <p class="text-red-600 text-sm"><br>{{ $message }}</p> @enderror
                         </div>
