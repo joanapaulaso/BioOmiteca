@@ -67,6 +67,18 @@ Route::get('my-projects', function () {
     return view('layouts.my-projects');
 })->name('my-projects');
 
+Route::get('equipe', function () {
+    return view('layouts.equipe');
+})->name('equipe');
+
+Route::get('contato', function () {
+    return view('layouts.contato');
+})->name('contato');
+
+Route::get('sobre', function () {
+    return view('layouts.sobre');
+})->name('sobre');
+
 Route::get('curadoria', function () {
     return view('layouts.curadoria');
 })->name('curadoria');
@@ -83,6 +95,10 @@ Route::get('molecule-search', function () {
     return view('layouts.molecule-search');
 })->name('molecule-search');
 
+Route::get('map-search', function () {
+    return view('layouts.map-search');
+})->name('map-search');
+
 Route::get('user/{id}', function (Request $request) {
     return view('layouts.user-page');
 })->name('user-page');
@@ -90,3 +106,15 @@ Route::get('user/{id}', function (Request $request) {
 Route::get('mol/{id_molecula}', function (Request $request) {
     return view('layouts.mol-page');
 })->name('mol-page');
+
+Route::get('map/{id_molecula}', function (Request $request) {
+    return view('layouts.map-page');
+})->name('map-page');
+
+Route::get('/avaliar-projeto/{id_projeto}', function (Request $request) {
+    return view('layouts.avaliar-projeto');
+})->name('avaliar-projeto');
+
+Route::get('/avaliacao/{id_projeto}', function (Request $request) {
+    return view('layouts.avaliacao');
+})->name('avaliacao');

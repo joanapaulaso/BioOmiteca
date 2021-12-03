@@ -42,15 +42,6 @@ return [
             'visibility' => 'public',
         ],
 
-        'espectro' => [
-            'driver' => 'ftp',
-            'host' => '	ftp://joanapaulasoliveira.com',
-            'username' => 'u937685253.bioomiteca.com',
-            'password' => 'xhsa*&Y#W[3',
-            'port' => 21,
-            'root' => '/public_html',
-        ],
-
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
@@ -76,7 +67,9 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
-        public_path('espectro') => storage_path('app/espectro'),
+        public_path('espectros') => storage_path('app/public/espectros'),
+        public_path('maps') => storage_path('app/public/maps'),
+        public_path('experimento') => storage_path('app/public/experimento'),
     ],
 
 ];

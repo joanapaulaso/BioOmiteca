@@ -22,7 +22,6 @@
                 <button class="flex p-3 rounded-lg bg-green-400 font-semibold text-xs uppercase text-center tracking-wider focus:outline-none focus:ring-2 focus:ring-green-500" wire:click="tornarCurador('{{ $id_usuario }}')">
                     Tornar curador
                 </button>
-
             </div>
             <div>
                 <button class="flex p-3 rounded-lg bg-green-400 font-semibold text-xs uppercase text-center tracking-wider focus:outline-none focus:ring-2 focus:ring-green-500" wire:click="tornarUsuario('{{ $id_usuario }}')">

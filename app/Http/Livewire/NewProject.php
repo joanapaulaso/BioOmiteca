@@ -8,12 +8,6 @@ use App\Models\NewProjects;
 use App\Models\NewMolecules;
 use App\Models\Spectra;
 use App\Models\NewMaps;
-use App\Http\Livewire\Field;
-use App\Http\Livewire\File;
-use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Storage;
 
 class NewProject extends Component
 {
@@ -21,6 +15,7 @@ class NewProject extends Component
     use WithFileUploads;
 
     public $user_id;
+    public $status = 0;
     public $responsavel;
     public $nome_projeto;
     public $id_projeto;
@@ -39,6 +34,7 @@ class NewProject extends Component
     public $massa;
     public $IDPubChem;
     public $aplicabilidade;
+    public $referencia;
     public $espectro;
     public $mapa;
     public $mapa_desc;
@@ -84,50 +80,26 @@ class NewProject extends Component
         /*$this->validate([
             'name' => 'required|min:4',
         ]);*/
-        //$experimento_storagePath  = Storage::disk('public')->getDriver()->getAdapter()->getPathPrefix() . "experimento/";
 
-        if ($this->project) {
-            $this->project= tap($this->project)->update([
+        $this->project = NewProjects::create([
 
-                'user_id' => auth()->user()->id,
-                'id_projeto' => $this->id_projeto,
-                'responsavel' => auth()->user()->name,
-                'nome_projeto' => auth()->user()->id . ' ' . auth()->user()->name . ' ' .  $this->especie,
-                'especie' => $this->especie,
-                'nome_popular' => $this->nome_popular,
-                'familia' => $this->familia,
-                'publicacao' => $this->publicacao,
-                'resumo' => $this->resumo,
-                'instituicao' => $this->instituicao,
-                'coordenacao' => $this->coordenacao,
-                'financiamento' => $this->financiamento,
-                'repositorio' => $this->repositorio,
-                'experimento' => Storage::disk('public')->put($this->experimento->hashName(), "experimentos"),
+            'user_id' => auth()->user()->id,
+            'id_projeto' => $this->id_projeto,
+            'responsavel' => auth()->user()->name,
+            'especie' => $this->especie,
+            'nome_projeto' => auth()->user()->id . ' ' . auth()->user()->name . ' ' .  $this->especie,
+            'nome_popular' => $this->nome_popular,
+            'familia' => $this->familia,
+            'publicacao' => $this->publicacao,
+            'resumo' => $this->resumo,
+            'instituicao' => $this->instituicao,
+            'coordenacao' => $this->coordenacao,
+            'financiamento' => $this->financiamento,
+            'repositorio' => $this->repositorio,
+            'experimento' => $this->experimento->storePublicly('experimento', 'public'),
+            'status' => $this->status,
 
-                ]);
-
-        } else {
-
-            $this->project = NewProjects::create([
-
-                'user_id' => auth()->user()->id,
-                'id_projeto' => $this->id_projeto,
-                'responsavel' => auth()->user()->name,
-                'especie' => $this->especie,
-                'nome_projeto' => auth()->user()->id . ' ' . auth()->user()->name . ' ' .  $this->especie,
-                'nome_popular' => $this->nome_popular,
-                'familia' => $this->familia,
-                'publicacao' => $this->publicacao,
-                'resumo' => $this->resumo,
-                'instituicao' => $this->instituicao,
-                'coordenacao' => $this->coordenacao,
-                'financiamento' => $this->financiamento,
-                'repositorio' => $this->repositorio,
-                'experimento' => $this->experimento->hashName(),
-
-                ]);
-
-        }
+        ]);
 
         $this->step++;
     }
@@ -142,7 +114,6 @@ class NewProject extends Component
             $this->project = NewMolecules::create([
 
                 'user_id' => auth()->user()->id,
-                'id_projeto' => $this->id_projeto,
                 'responsavel' => auth()->user()->name,
                 'nome_projeto' => auth()->user()->id . ' ' . auth()->user()->name . ' ' .  $this->especie,
                 'especie' => $this->especie,
@@ -151,16 +122,18 @@ class NewProject extends Component
                 'massa' => $this->massa[$key],
                 'IDPubChem' => $this->IDPubChem[$key],
                 'aplicabilidade' => $this->aplicabilidade[$key],
+                'referencia' => $this->referencia[$key],
+                'status' => $this->status,
                 'espectro' => $this->espectro[$key]->hashName(),
 
                 ]);
 
             $mol_name = $this->espectro[$key]->hashName();
-            $mol_localpath = $this->espectro[$key]->storeAs('espectro', $mol_name);
+            $mol_localpath = $this->espectro[$key]->storePublicly('espectro', 'public');
             $mol_publicpath = asset($mol_localpath);
 
             $a = 0;
-            $files = fopen(asset($mol_publicpath), "r");
+            $files = fopen($mol_localpath, "r");
             while(!feof($files)) {
                 $content = fgets($files);
                 $carray = explode(",", $content);
@@ -194,17 +167,21 @@ class NewProject extends Component
         /*$this->validate([
             'color' => 'required',
         ]);*/
-        $map_storagePath  = Storage::disk('maps')->getDriver()->getAdapter()->getPathPrefix() . "maps/";
 
         $this->project = NewMaps::create([
 
             'user_id' => auth()->user()->id,
             'responsavel' => auth()->user()->name,
             'nome_projeto' => auth()->user()->id . ' ' . auth()->user()->name . ' ' .  $this->especie,
-            'mapa' => $this->mapa,
+            'mapa' => $this->mapa->hashName(),
+            'especie' => $this->especie,
             'mapa_desc' => $this->mapa_desc,
 
             ]);
+
+            $map_name = $this->mapa->hashName();
+            $map_localpath = $this->mapa->storePublicly('maps', 'public');
+            $map_publicpath = asset($map_localpath);
 
         session()->flash('message', 'Projeto enviado!');
 
@@ -244,7 +221,8 @@ class NewProject extends Component
      *
      * @return response()
      */
-     private function resetInputFields(){
+    private function resetInputFields()
+    {
         $this->nome_projeto = '';
         $this->especie = '';
         $this->nome_popular = '';

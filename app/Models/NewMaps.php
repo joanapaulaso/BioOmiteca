@@ -13,7 +13,9 @@ class NewMaps extends Model
 
     protected $fillable = [
         'id_mapa',
+        'status',
         'user_id',
+        'especie',
         'responsavel',
         'nome_projeto',
         'mapa',

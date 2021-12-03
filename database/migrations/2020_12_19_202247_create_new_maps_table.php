@@ -21,6 +21,8 @@ class CreateNewMapsTable extends Migration
             $table->foreign('responsavel')->references('responsavel')->on('new_projects');
             $table->string('nome_projeto')->nullable();
             $table->foreign('nome_projeto')->references('nome_projeto')->on('new_projects');
+            $table->string('especie');
+            $table->foreign('especie')->references('especie')->on('new_projects');
             $table->string('mapa')->nullable();
             $table->string('mapa_desc')->nullable();
             $table->timestamps();

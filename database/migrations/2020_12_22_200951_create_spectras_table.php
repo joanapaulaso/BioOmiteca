@@ -15,13 +15,13 @@ class CreateSpectrasTable extends Migration
     {
         Schema::create('spectras', function (Blueprint $table) {
             $table->bigInteger('user_id');
-            $table->foreign('user_id')->references('user_id')->on('new_projects')->onDelete('cascade');
+            $table->foreign('user_id')->references('user_id')->on('new_projects');
             $table->string('nome_projeto');
-            $table->foreign('nome_projeto')->references('nome_projeto')->on('new_projects')->onDelete('cascade');
+            $table->foreign('nome_projeto')->references('nome_projeto')->on('new_projects');
             $table->string('espectro')->nullable();
-            $table->foreign('espectro')->references('espectro')->on('new_molecules')->onDelete('cascade');
+            $table->foreign('espectro')->references('espectro')->on('new_molecules');
             $table->string('nome_molecula')->nullable();
-            $table->foreign('nome_molecula')->references('nome_molecula')->on('new_molecules')->onDelete('cascade');
+            $table->foreign('nome_molecula')->references('nome_molecula')->on('new_molecules');
             $table->json('mz')->nullable();
             $table->json('int')->nullable();
             $table->timestamps();

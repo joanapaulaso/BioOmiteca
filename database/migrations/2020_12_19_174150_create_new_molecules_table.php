@@ -23,12 +23,15 @@ class CreateNewMoleculesTable extends Migration
             $table->foreign('nome_projeto')->references('nome_projeto')->on('new_projects');
             $table->string('especie');
             $table->foreign('especie')->references('especie')->on('new_projects');
+            $table->integer('status');
+            $table->foreign('status')->references('status')->on('new_projects')->onUpdate('cascade')->onDelete('cascade');
             $table->string('nome_molecula')->index()->nullable();
             $table->string('espectro')->index()->nullable();
             $table->string('formula')->nullable();
             $table->string('massa')->nullable();
             $table->string('IDPubChem')->nullable();
             $table->string('aplicabilidade')->nullable();
+            $table->string('referencia')->nullable();
             $table->timestamps();
         });
     }

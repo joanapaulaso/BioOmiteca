@@ -18,6 +18,7 @@ class CreateNewProjectsTable extends Migration
             $table->bigInteger('user_id')->index()->onUpdate('cascade');
             $table->string('responsavel')->index()->onUpdate('cascade');
             $table->string('nome_projeto')->index()->onUpdate('cascade');
+            $table->integer('status')->index()->onUpdate('cascade');
             $table->string('especie')->index()->onUpdate('cascade');
             $table->string('familia')->nullable();
             $table->string('nome_popular')->nullable();

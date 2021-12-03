@@ -26,7 +26,7 @@
             <aside class="relative bg-gray-100">
                 @include('layouts.menu')
             </aside>
-            <main class="relative bg-white">
+            <main class="relative bg-white w-full">
                 @yield('conteudo')
             </main>
         </div>

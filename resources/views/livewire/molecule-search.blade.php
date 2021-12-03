@@ -78,7 +78,7 @@
                                             class="px-6 py-4 whitespace-no-wrap border-b text-gray-800 border-gray-200 text-sm leading-5">
                                             <a href="/mol/{{ $molecule->id_molecula }}">
                                                 <button class="flex p-3 rounded-lg bg-green-400 font-semibold text-xs uppercase text-center tracking-wider focus:outline-none focus:ring-2 focus:ring-green-500">
-                                                    Visualizar espectro
+                                                    Visualizar
                                                 </button>
                                             </a>
                                         </td>

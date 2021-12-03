@@ -13,6 +13,7 @@ class NewProjects extends Model
 
     protected $fillable = [
         'user_id',
+        'status',
         'responsavel',
         'nome_projeto',
         'especie',
@@ -26,4 +27,10 @@ class NewProjects extends Model
         'repositorio',
         'experimento',
     ];
+
+    public function projects()
+    {
+        return $this->hasMany(NewMolecules::class, 'status', 'status');
+    }
+
 }

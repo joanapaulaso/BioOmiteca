@@ -106,7 +106,13 @@
                                 <div class="mb-2">
                                     <label for="experimento" class="font-thin">Arquivo dos metadados do experimento (.csv)</label>
                                 </div>
-                                <div class="w-48 h-10 p-0 mx-1 items-center transition duration-500 ease-in-out bg-blue-200 hover:bg-blue-500 hover:text-white text-sm cursor-pointer rounded-md">
+                                <div
+                                x-data="{ isUploading: false, progress: 0 }"
+                                x-on:livewire-upload-start="isUploading = true"
+                                x-on:livewire-upload-finish="isUploading = false"
+                                x-on:livewire-upload-error="isUploading = false"
+                                x-on:livewire-upload-progress="progress = $event.detail.progress"
+                                class="w-48 h-10 p-0 mx-1 items-center transition duration-500 ease-in-out bg-blue-200 hover:bg-blue-500 hover:text-white text-sm cursor-pointer rounded-md">
                                     <input type="file" wire:model="experimento" class="absolute block w-48 h-10 opacity-0 flex-row items-center cursor-pointer">
                                     <button class="flex cursor-pointer items-center m-2">
                                         <svg class="cursor-pointer w-6 h-6 mr-2 mt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -114,6 +120,10 @@
                                         </svg>
                                         Selecione um arquivo
                                     </button>
+                                    <div x-show="isUploading" class="mt-3">
+                                        <p class="mt-2 font-semibold text-red-700 uppercase text-xs">Aguarde. Carregando...</p>
+                                        <progress class="w-full h-2" max="100" x-bind:value="progress"></progress>
+                                    </div>
                                 </div>
                                 @error('experimento') <p class="text-red-600 text-sm"><br>{{ $message }}</p> @enderror
                             </div>
@@ -183,9 +193,24 @@
                                 </div>
                                 <div class="flex-grow top-0 md:mx-5 my-1 md:p-3 w-full md:w-2/3">
                                     <div class="mb-2">
+                                        <label for="aplicabilidade" class="font-thin">Artigos de referência (aplicabilidades)</label>
+                                    </div>
+                                    <div class="mx-1">
+                                        <input type="text" wire:model="referencia.0" maxlength="100" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
+                                    </div>
+                                    @error('aplicabilidade') <p class="text-red-600 text-sm"><br>{{ $message }}</p> @enderror
+                                </div>
+                                <div class="flex-grow top-0 md:mx-5 my-1 md:p-3 w-full md:w-2/3">
+                                    <div class="mb-2">
                                         <label for="espectro" class="font-thin">Arquivo do espectro de massas (.txt)</label>
                                     </div>
-                                    <div class="w-48 h-10 p-0 mx-1 items-center transition duration-500 ease-in-out bg-blue-200 hover:bg-blue-500 hover:text-white text-sm cursor-pointer rounded-md">
+                                    <div
+                                    x-data="{ isUploading: false, progress: 0 }"
+                                    x-on:livewire-upload-start="isUploading = true"
+                                    x-on:livewire-upload-finish="isUploading = false"
+                                    x-on:livewire-upload-error="isUploading = false"
+                                    x-on:livewire-upload-progress="progress = $event.detail.progress"
+                                    class="w-48 h-10 p-0 mx-1 items-center transition duration-500 ease-in-out bg-blue-200 hover:bg-blue-500 hover:text-white text-sm cursor-pointer rounded-md">
                                         <input type="file" wire:model="espectro.0" class="absolute block w-48 h-10 opacity-0 flex-row items-center cursor-pointer">
                                         <button class="flex cursor-pointer items-center m-2">
                                             <svg class="cursor-pointer w-6 h-6 mr-2 mt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -193,6 +218,10 @@
                                             </svg>
                                             Selecione um arquivo
                                         </button>
+                                        <div x-show="isUploading" class="mt-3">
+                                            <p class=" mt-2 font-semibold text-red-700 uppercase text-xs">Aguarde. Carregando...</p>
+                                            <progress class="w-full h-2" max="100" x-bind:value="progress"></progress>
+                                        </div>
                                     </div>
                                     @error('espectro') <p class="text-red-600 text-sm"><br>{{ $message }}</p> @enderror
                                 </div>
@@ -274,9 +303,24 @@
                                 </div>
                                 <div class="flex-grow top-0 md:mx-5 my-1 md:p-3 w-full md:w-2/3">
                                     <div class="mb-2">
+                                        <label for="aplicabilidade" class="font-thin">Artigos de referência das aplicabilidades (inclua os links da publicação separados por vírgula)</label>
+                                    </div>
+                                    <div class="mx-1">
+                                        <input type="text" wire:model="referencia.{{ $value }}" maxlength="100" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
+                                    </div>
+                                    @error('aplicabilidade') <p class="text-red-600 text-sm"><br>{{ $message }}</p> @enderror
+                                </div>
+                                <div class="flex-grow top-0 md:mx-5 my-1 md:p-3 w-full md:w-2/3">
+                                    <div class="mb-2">
                                         <label for="espectro" class="font-thin">Arquivo do espectro de massas (.txt)</label>
                                     </div>
-                                    <div class="w-48 h-10 p-0 mx-1 items-center transition duration-500 ease-in-out bg-blue-200 hover:bg-blue-500 hover:text-white text-sm cursor-pointer rounded-md">
+                                    <div
+                                    x-data="{ isUploading: false, progress: 0 }"
+                                    x-on:livewire-upload-start="isUploading = true"
+                                    x-on:livewire-upload-finish="isUploading = false"
+                                    x-on:livewire-upload-error="isUploading = false"
+                                    x-on:livewire-upload-progress="progress = $event.detail.progress"
+                                    class="w-48 h-10 p-0 mx-1 items-center transition duration-500 ease-in-out bg-blue-200 hover:bg-blue-500 hover:text-white text-sm cursor-pointer rounded-md">
                                         <input type="file" wire:model="espectro.{{ $value }}" class="absolute block w-48 h-10 opacity-0 flex-row items-center cursor-pointer">
                                         <button class="flex cursor-pointer items-center m-2">
                                             <svg class="cursor-pointer w-6 h-6 mr-2 mt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -284,6 +328,10 @@
                                             </svg>
                                             Selecione um arquivo
                                         </button>
+                                        <div x-show="isUploading" class="mt-3">
+                                            <p class=" mt-2 font-semibold text-red-700 uppercase text-xs">Aguarde. Carregando...</p>
+                                            <progress class="w-full h-2" max="100" x-bind:value="progress"></progress>
+                                        </div>
                                     </div>
                                     @error('espectro') <p class="text-red-600 text-sm"><br>{{ $message }}</p> @enderror
                                 </div>
@@ -341,7 +389,13 @@
                             <div class="mb-2">
                                 <label for="mapa" class="font-thin">Arquivo do mapa de modelagem ecológica</label>
                             </div>
-                            <div class="w-48 h-10 p-0 mx-1 items-center transition duration-500 ease-in-out bg-blue-200 hover:bg-blue-500 hover:text-white text-sm cursor-pointer rounded-md">
+                            <div
+                            x-data="{ isUploading: false, progress: 0 }"
+                            x-on:livewire-upload-start="isUploading = true"
+                            x-on:livewire-upload-finish="isUploading = false"
+                            x-on:livewire-upload-error="isUploading = false"
+                            x-on:livewire-upload-progress="progress = $event.detail.progress"
+                            class="w-48 h-10 p-0 mx-1 items-center transition duration-500 ease-in-out bg-blue-200 hover:bg-blue-500 hover:text-white text-sm cursor-pointer rounded-md">
                                 <input type="file" wire:model="mapa" class="absolute block w-48 h-10 opacity-0 flex-row items-center cursor-pointer">
                                 <button class="flex cursor-pointer items-center m-2">
                                     <svg class="cursor-pointer w-6 h-6 mr-2 mt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -349,6 +403,10 @@
                                     </svg>
                                     Selecione um arquivo
                                 </button>
+                                <div x-show="isUploading" class="mt-3">
+                                    <p class=" mt-2 font-semibold text-red-700 uppercase text-xs">Aguarde. Carregando...</p>
+                                    <progress class="w-full h-2" max="100" x-bind:value="progress"></progress>
+                                </div>
                             </div>
                             @error('mapa') <p class="text-red-600 text-sm"><br>{{ $message }}</p> @enderror
                         </div>
@@ -376,17 +434,26 @@
             </div>
             @endif
         </div>
-        <div class="mt-2 ml-10 flex gap-2">
-
-            @if($step > 0 && $step <= 2)
+        {{-- Step forward button --}}
+        <div class="mt-2 ml-10">
+            {{-- @if($step > 0 && $step <= 2)
             <button type="button" wire:click="decreaseStep" class="flex gap-2 transition duration-500 ease-in p-3 mb-5 bg-blue-200 hover:bg-green-200 rounded-md">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
                 </svg>
                 Voltar
             </button>
+            @endif --}}
+            @if($step < 2)
+            <div class="flex gap-3 mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 self-center mr-2 text-red-700" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                </svg>
+                <p class="text-sm text-red-700">
+                    Antes de prosseguir para a próxima etapa, revise seus dados com atenção!
+                </p>
+            </div>
             @endif
-
             @if($step <= 2)
             <button type="submit" class="flex gap-2 transition duration-500 ease-in p-3 mb-5 bg-blue-200 hover:bg-green-200 rounded-md">
                 Próximo

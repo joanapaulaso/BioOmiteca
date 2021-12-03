@@ -19,7 +19,7 @@
             Bancos de dados
         </a>
     </div>
-    <div
+    {{-- <div
         class="bg-white transition-colors duration-300 hover:bg-blue-400 hover:text-white border-r-2 border-gray-400">
         <a href="#" class="px-4 py-2 sm-screen flex font-extralight">
             <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -32,7 +32,7 @@
             </svg>
             Espécies
         </a>
-    </div>
+    </div> --}}
     <div
         class="bg-white transition-colors duration-300 hover:bg-blue-400 hover:text-white border-r-2 border-gray-400">
         <a href="{{ route('molecule-search') }}" class="px-4 py-2 sm-screen flex font-extralight">
@@ -48,7 +48,7 @@
     </div>
     <div
         class="bg-white transition-colors duration-300 hover:bg-blue-400 hover:text-white border-r-2 border-b-2 rounded-br-xl rounded-bl-xl border-gray-400">
-        <a href="#" class="px-4 pr-4 py-2 sm-screen flex font-extralight">
+        <a href="{{ route('map-search') }}" class="px-4 pr-4 py-2 sm-screen flex font-extralight">
             <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -87,7 +87,7 @@
             Equipe
         </a>
     </div>
-    <div class="transition-colors duration-300 hover:bg-blue-400 hover:text-white">
+    {{-- <div class="transition-colors duration-300 hover:bg-blue-400 hover:text-white">
         <a href="#" class="px-4 py-2 sm-screen flex font-extralight">
             <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
@@ -96,8 +96,8 @@
             </svg>
             Publicações
         </a>
-    </div>
-    <div class="transition-colors duration-300 hover:bg-blue-400 hover:text-white">
+    </div> --}}
+    {{-- <div class="transition-colors duration-300 hover:bg-blue-400 hover:text-white">
         <a href="#" class="px-4 py-2 sm-screen flex font-extralight">
             <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
@@ -106,7 +106,7 @@
             </svg>
             FAQ
         </a>
-    </div>
+    </div> --}}
     <div class="transition-colors duration-300 hover:bg-blue-400 hover:text-white">
         <a href="#" class="px-4 py-2 sm-screen flex font-extralight">
             <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"

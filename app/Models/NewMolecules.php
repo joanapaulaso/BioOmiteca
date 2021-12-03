@@ -14,6 +14,7 @@ class NewMolecules extends Model
     protected $fillable = [
         'id_molecula',
         'user_id',
+        'status',
         'responsavel',
         'nome_projeto',
         'especie',
@@ -22,6 +23,7 @@ class NewMolecules extends Model
         'massa',
         'IDPubChem',
         'aplicabilidade',
+        'referencia',
         'espectro',
     ];
 

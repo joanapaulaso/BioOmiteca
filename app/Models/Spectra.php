@@ -11,6 +11,7 @@ class Spectra extends Model
 
     protected $fillable = [
         'user_id',
+        'status',
         'nome_projeto',
         'nome_molecula',
         'espectro',

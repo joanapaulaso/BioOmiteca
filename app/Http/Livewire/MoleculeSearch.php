@@ -18,6 +18,10 @@ class MoleculeSearch extends Component
     public $searchMol = '';
     public $molName;
     public $mols;
+    public $status;
+    public $status_0 = 0;
+    public $status_1 = 1;
+    public $status_2 = 2;
 
 
     public function updatingSearch()
@@ -30,7 +34,9 @@ class MoleculeSearch extends Component
     public function render()
     {
 
-        $this->mols = DB::table('new_molecules')->where('nome_molecula', '=', $this->molName)->get();
+        $this->mols = DB::table('new_molecules')
+            ->where('nome_molecula', '=', $this->molName)
+            ->get();
 
         return view('livewire.molecule-search', [
             'molecules' => NewMolecules::where('nome_molecula', 'like', '%'.$this->searchMol.'%')
@@ -39,6 +45,7 @@ class MoleculeSearch extends Component
                 ->paginate($this->perPage),
             'mols' => $this->mols,
         ]);
+
 
     }
 

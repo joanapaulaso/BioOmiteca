@@ -52,9 +52,9 @@
                         </a>
                     </div>
                     <div class="uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-5 mt-5">
-                        página em construção!
+                        versão beta inaugurada! entre em contato para obter o login!
                     </div>
-                    {{-- <div class="mx-auto">
+                    <div class="mx-auto">
                         @if (Route::has('login'))
                         <div class="flex flex-wrap relative mt-5">
                             @auth
@@ -77,7 +77,7 @@
                                     </button>
                                 </a>
                             </div>
-                            @if (Route::has('register'))
+                            {{-- @if (Route::has('register'))
                             <div
                                 class="z-0 relative w-36 h-10 mx-7 mt-5 rounded-xl bg-transparent border-2 border-blue-800">
                                 <a href="{{ route('register') }}">
@@ -87,11 +87,11 @@
                                     </button>
                                 </a>
                             </div>
-                            @endif
+                            @endif --}}
                             @endauth
                         </div>
                         @endif
-                    </div> --}}
+                    </div>
                 </div>
             </div>
             <div class="flex-auto">
@@ -200,9 +200,9 @@
                 </a>
             </div>
             <div class="lp-menu-item uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-14 mt-5">
-                página em construção!
+                versão beta inaugurada! entre em contato para obter o login!
             </div>
-            {{-- <div class="mx-auto">
+            <div class="mx-auto">
                 @if (Route::has('login'))
                 <div class="flex flex-wrap relative mt-5">
                     @auth
@@ -225,7 +225,7 @@
                             </button>
                         </a>
                     </div>
-                    @if (Route::has('register'))
+                    {{-- @if (Route::has('register'))
                     <div
                         class="lp-button z-0 relative w-36 h-10 mx-14 rounded-xl bg-transparent border-2 border-blue-800">
                         <a href="{{ route('register') }}">
@@ -235,11 +235,11 @@
                             </button>
                         </a>
                     </div>
-                    @endif
+                    @endif --}}
                     @endauth
                 </div>
                 @endif
-            </div> --}}
+            </div>
         </div>
         <div id="menu-btn" x-data="{ open: true }">
             <button>

@@ -27,7 +27,7 @@
             <aside class="relative bg-gray-100">
                 @include('layouts.menu')
             </aside>
-            @if(Auth::user()->is_admin == 1)
+            @if(Auth::user()->is_admin == 1 || Auth::user()->is_admin == 9)
             <main class="relative w-full bg-white">
                 @livewire('curadoria')
             </main>
