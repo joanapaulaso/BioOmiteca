@@ -30,7 +30,7 @@ class CreateNewMoleculesTable extends Migration
             $table->string('formula')->nullable();
             $table->string('massa')->nullable();
             $table->string('IDPubChem')->nullable();
-            $table->string('aplicabilidade')->nullable();
+            $table->longText('aplicabilidade')->nullable();
             $table->string('referencia')->nullable();
             $table->timestamps();
         });

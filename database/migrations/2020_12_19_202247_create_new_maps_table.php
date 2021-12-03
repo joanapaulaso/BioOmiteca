@@ -24,7 +24,7 @@ class CreateNewMapsTable extends Migration
             $table->string('especie');
             $table->foreign('especie')->references('especie')->on('new_projects');
             $table->string('mapa')->nullable();
-            $table->string('mapa_desc')->nullable();
+            $table->longText('mapa_desc')->nullable();
             $table->timestamps();
         });
     }

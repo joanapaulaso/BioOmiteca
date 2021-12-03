@@ -23,7 +23,7 @@ class CreateNewProjectsTable extends Migration
             $table->string('familia')->nullable();
             $table->string('nome_popular')->nullable();
             $table->string('publicacao')->nullable();
-            $table->string('resumo')->nullable();
+            $table->longText('resumo')->nullable();
             $table->string('instituicao')->nullable();
             $table->string('coordenacao')->nullable();
             $table->string('financiamento')->nullable();
