@@ -71,5 +71,4 @@ return [
         public_path('maps') => storage_path('app/public/maps'),
         public_path('experimento') => storage_path('app/public/experimento'),
     ],
-
 ];
