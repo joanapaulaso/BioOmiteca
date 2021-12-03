@@ -57,7 +57,7 @@
             Modelagem ecológica
         </a>
     </div>
-    <div class="transition-colors duration-300 hover:bg-green-500 hover:text-white">
+    {{-- <div class="transition-colors duration-300 hover:bg-green-500 hover:text-white">
         <a href="{{ route('new-project') }}" class="px-4 py-2 sm-screen flex font-extralight">
             <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
@@ -66,7 +66,7 @@
             </svg>
             Envie seus dados
         </a>
-    </div>
+    </div> --}}
     <div class="transition-colors duration-300 hover:bg-blue-400 hover:text-white">
         <a href="#" class="px-4 py-2 sm-screen flex font-extralight">
             <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
