@@ -17,6 +17,7 @@ class MapPage extends Component
         $project_id = collect($map)->keyBy('id_project')->keys()->pop();
         $responsavel = collect($map)->keyBy('responsavel')->keys()->pop();
         $species = collect($map)->keyBy('species')->keys()->pop();
+        $maps_abstract = collect($map)->keyBy('maps_abstract')->keys()->pop();
         $map1_file = collect($map)->keyBy('map1_file')->keys()->pop();
         $map1_desc = collect($map)->keyBy('map1_desc')->keys()->pop();
         $map2_file = collect($map)->keyBy('map2_file')->keys()->pop();
@@ -54,9 +55,14 @@ class MapPage extends Component
         $estadual = collect($metadata_pa)->keyBy('estadual')->keys()->pop();
         $municipal = collect($metadata_pa)->keyBy('municipal')->keys()->pop();
 
+        $general = DB::table('new_projects')->where('id_project', '=', $project_id)->get();
+        $world_flora_link = collect($general)->keyBy('world_flora_link')->keys()->pop();
+
         return view('livewire.map-page', [
             'responsavel' => $responsavel,
+            'world_flora_link' => $world_flora_link,
             'species' => $species,
+            'maps_abstract' => $maps_abstract,
             'map1_file' => $map1_file,
             'map1_desc' => $map1_desc,
             'map2_file' => $map2_file,

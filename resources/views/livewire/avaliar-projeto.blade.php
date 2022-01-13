@@ -164,6 +164,8 @@
         <div class="block mx-auto text-center py-3">{{ $municipal }}</div>
     </div>
     <div class="flex-none w-full">
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Resumo da modelagem</div>
+        <div class="block mx-auto text-center py-3">{{ $maps_abstract }}</div>
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Mapa 1</div>
         <div class="block mx-auto text-center py-3">
             <a href="../../maps/{{ $map1_file }}" target="_blank">

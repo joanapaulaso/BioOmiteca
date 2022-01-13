@@ -58,6 +58,7 @@ class AvaliarProjeto extends Component
         $municipal = collect($metadata_pa)->keyBy('municipal')->keys()->pop();
 
         $map = DB::table('new_maps')->where('id_project', '=', $project)->get();
+        $maps_abstract = collect($map)->keyBy('maps_abstract')->keys()->pop();
         $map1_file = collect($map)->keyBy('map1_file')->keys()->pop();
         $map1_desc = collect($map)->keyBy('map1_desc')->keys()->pop();
         $map2_file = collect($map)->keyBy('map2_file')->keys()->pop();
@@ -110,6 +111,7 @@ class AvaliarProjeto extends Component
             'approach' => $approach,
             'ion_mode' => $ion_mode,
             'id_software' => $id_software,
+            'maps_abstract' => $maps_abstract,
             'map1_file' => $map1_file,
             'map1_desc' => $map1_desc,
             'map2_file' => $map2_file,

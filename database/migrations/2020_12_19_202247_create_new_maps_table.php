@@ -16,6 +16,7 @@ class CreateNewMapsTable extends Migration
         Schema::create('new_maps', function (Blueprint $table) {
 
             $table->bigIncrements('id_maps');
+            $table->longText('maps_abstract')->nullable();
             $table->string('map1_file')->nullable();
             $table->string('map2_file')->nullable();
             $table->string('map3_file')->nullable();

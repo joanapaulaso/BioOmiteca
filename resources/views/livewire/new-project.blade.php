@@ -498,6 +498,15 @@
                     <div class="align-middle inline-block min-w-full bg-white  px-8 pt-3 rounded-bl-lg rounded-br-lg">
                         <div class="flex-grow top-0 md:mx-5 my-1 md:p-3 w-full md:w-2/3">
                             <div class="mb-2">
+                                <label for="maps_abstract" class="font-thin">Resumo da Modelagem</label>
+                            </div>
+                            <div class="mx-1">
+                                <textarea wire:model="maps_abstract" maxlength="1000" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md"></textarea>
+                            </div>
+                            @error('maps_abstract') <p class="text-red-600 text-sm"><br>{{ $message }}</p> @enderror
+                        </div>
+                        <div class="flex-grow top-0 md:mx-5 my-1 md:p-3 w-full md:w-2/3">
+                            <div class="mb-2">
                                 <label for="map1_file" class="font-thin">Mapa 1 (.pdf)</label>
                             </div>
                             <div

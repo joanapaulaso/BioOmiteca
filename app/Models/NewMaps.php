@@ -13,6 +13,7 @@ class NewMaps extends Model
 
     protected $fillable = [
         'id_maps',
+        'maps_abstract',
         'map1_file',
         'map1_desc',
         'map2_file',

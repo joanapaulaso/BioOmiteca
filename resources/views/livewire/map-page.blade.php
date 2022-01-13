@@ -3,6 +3,10 @@
         Modelagem ecológica da espécie {{ $species }}
     </div>
     <div class="mt-10 text-2xl font-mono font-semibold mb-4 text-center">
+        Resumo da modelagem
+    </div>
+    <div class="block mx-auto text-center py-3">{{ $maps_abstract }}</div>
+    <div class="mt-10 text-2xl font-mono font-semibold mb-4 text-center">
         Metadados do experimento
     </div>
     <div class="flex-none w-full">
@@ -12,8 +16,6 @@
         <div class="block mx-auto text-center py-3">{{ $resolution }}</div>
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Método do modelo de consenso</div>
         <div class="block mx-auto text-center py-3">{{ $ensemble }}</div>
-
-
     </div>
     <div class="mt-10 text-2xl font-mono font-semibold mb-4 text-center">
         Efetividade de Unidades de Conservação - percentual de área de hotspots com cobertural legal
@@ -114,4 +116,8 @@
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Repositório de dados (link)</div>
         <div class="block mx-auto text-center py-3">{{ $repository_maps }}</div>
     </div>
+    <div class="mt-10 text-2xl font-mono font-semibold mb-4 text-center">
+        Mais sobre a espécie
+    </div>
+    <iframe src="{{ $world_flora_link }}" style="border:0px #ffffff none;" name="species" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="500px" width="100%" allowfullscreen></iframe>
 </div>

@@ -67,6 +67,7 @@ class NewProject extends Component
 
     // NewMaps Table variables
     public $id_maps;
+    public $maps_abstract;
     public $map1_file;
     public $map1_desc;
     public $map2_file;
@@ -266,6 +267,7 @@ class NewProject extends Component
 
             // NOT FOREIGN
             'id_maps' => $this->id_maps,
+            'maps_abstract' => $this->maps_abstract,
             'map1_file' => $this->map1_file->hashName(),
             'map1_desc' => $this->map1_desc,
             'map2_file' => $this->map2_file->hashName(),
