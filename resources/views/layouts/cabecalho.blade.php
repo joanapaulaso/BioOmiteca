@@ -28,7 +28,7 @@
                     Bancos de dados
                 </a>
             </div>
-            <div
+            {{-- <div
                 class="bg-gray-100 transition-colors duration-300 hover:bg-blue-400 hover:text-white border-r-2 border-gray-400">
                 <a href="#" class="px-1 py-2 sm-screen flex font-extralight">
                     <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -41,7 +41,7 @@
                     </svg>
                     Espécies
                 </a>
-            </div>
+            </div> --}}
             <div
                 class="bg-gray-100 transition-colors duration-300 hover:bg-blue-400 hover:text-white border-r-2 border-gray-400">
                 <a href="{{ route('molecule-search') }}" class="px-1 py-2 sm-screen flex font-extralight">
@@ -57,7 +57,7 @@
             </div>
             <div
                 class="bg-gray-100 transition-colors duration-300 hover:bg-blue-400 hover:text-white border-r-2 border-b-2 rounded-br-xl rounded-bl-xl border-gray-400">
-                <a href="#" class="pl-1 pr-4 py-2 sm-screen flex font-extralight">
+                <a href="{{ route('map-search') }}" class="pl-1 pr-4 py-2 sm-screen flex font-extralight">
                     <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -66,7 +66,7 @@
                     Modelagem ecológica
                 </a>
             </div>
-            <div class="bg-white transition-colors duration-300 hover:bg-green-500 hover:text-white">
+            {{-- <div class="bg-white transition-colors duration-300 hover:bg-green-500 hover:text-white">
                 <a href="{{ route('new-project') }}" class="px-1 py-2 sm-screen flex font-extralight">
                     <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -75,9 +75,9 @@
                     </svg>
                     Envie seus dados
                 </a>
-            </div>
+            </div> --}}
             <div class="bg-white transition-colors duration-300 hover:bg-blue-400 hover:text-white">
-                <a href="#" class="px-1 py-2 sm-screen flex font-extralight">
+                <a href="{{ route('about') }}" class="px-1 py-2 sm-screen flex font-extralight">
                     <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -87,7 +87,7 @@
                 </a>
             </div>
             <div class="bg-white transition-colors duration-300 hover:bg-blue-400 hover:text-white">
-                <a href="#" class="px-1 py-2 sm-screen flex font-extralight">
+                <a href="{{ route('team') }}" class="px-1 py-2 sm-screen flex font-extralight">
                     <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -96,7 +96,7 @@
                     Equipe
                 </a>
             </div>
-            <div class="bg-white transition-colors duration-300 hover:bg-blue-400 hover:text-white">
+            {{-- <div class="bg-white transition-colors duration-300 hover:bg-blue-400 hover:text-white">
                 <a href="#" class="px-1 py-2 sm-screen flex font-extralight">
                     <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -115,9 +115,9 @@
                     </svg>
                     FAQ
                 </a>
-            </div>
+            </div> --}}
             <div class="bg-white transition-colors duration-300 hover:bg-blue-400 hover:text-white">
-                <a href="#" class="px-1 py-2 sm-screen flex font-extralight">
+                <a href="{{ route('contact') }}" class="px-1 py-2 sm-screen flex font-extralight">
                     <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -140,7 +140,7 @@
                 </a>
             </div>
             <div class="bg-white transition-colors duration-300 hover:bg-blue-400 hover:text-white rounded-br-xl">
-                <a href="#" class="px-1 py-2 sm-screen flex font-extralight">
+                <a href="{{ route('sistema-admin') }}" class="px-1 py-2 sm-screen flex font-extralight">
                     <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
