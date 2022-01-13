@@ -2,9 +2,9 @@
     <div class="mt-5 mx-2">
         <div class="w-11/12 mx-1">
             <label for="search" class="text-md font-medium text-left text-gray-700">
-                Nome ou massa da molécula:
+                Nome da espécie:
             </label>
-            <input id="search" type="text" wire:model="searchMol" onfocus="this.value=''" placeholder="Digite o termo da busca"
+            <input id="search" type="text" wire:model="search" onfocus="this.value=''" placeholder="Digite o termo da busca"
                 class="w-full mt-2 border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
         </div>
         <div class="mx-1 mt-2">
@@ -50,16 +50,16 @@
                                     <tr>
                                         <td
                                             class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm text-center leading-5">
-                                            {{ $map->id_mapa }}</td>
+                                            {{ $map->id_maps }}</td>
                                         <td
                                             class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm text-center leading-5">
-                                            {{ $map->especie }}</td>
+                                            {{ $map->species }}</td>
                                         <td
                                             class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm text-center leading-5">
                                             {{ $map->responsavel }}</td>
                                         <td
                                             class="px-6 py-4 whitespace-no-wrap border-b text-gray-800 border-gray-200 text-sm text-center leading-5">
-                                            <a href="/map/{{ $map->id_mapa }}">
+                                            <a href="/map/{{ $map->id_maps }}">
                                                 <button class="flex mx-auto p-3 rounded-lg bg-green-400 font-semibold text-xs uppercase text-center tracking-wider focus:outline-none focus:ring-2 focus:ring-green-500">
                                                     Visualizar
                                                 </button>

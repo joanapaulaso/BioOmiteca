@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
 
 <head>
     <meta charset="utf-8">
@@ -51,9 +51,6 @@
                             contato
                         </a>
                     </div>
-                    <div class="uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-5 mt-5">
-                        versão beta inaugurada! entre em contato para obter o login!
-                    </div>
                     <div class="mx-auto">
                         @if (Route::has('login'))
                         <div class="flex flex-wrap relative mt-5">
@@ -77,7 +74,7 @@
                                     </button>
                                 </a>
                             </div>
-                            {{-- @if (Route::has('register'))
+                            @if (Route::has('register'))
                             <div
                                 class="z-0 relative w-36 h-10 mx-7 mt-5 rounded-xl bg-transparent border-2 border-blue-800">
                                 <a href="{{ route('register') }}">
@@ -87,7 +84,7 @@
                                     </button>
                                 </a>
                             </div>
-                            @endif --}}
+                            @endif
                             @endauth
                         </div>
                         @endif
@@ -199,9 +196,6 @@
                     contato
                 </a>
             </div>
-            <div class="lp-menu-item uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-14 mt-5">
-                versão beta inaugurada! entre em contato para obter o login!
-            </div>
             <div class="mx-auto">
                 @if (Route::has('login'))
                 <div class="flex flex-wrap relative mt-5">
@@ -225,7 +219,7 @@
                             </button>
                         </a>
                     </div>
-                    {{-- @if (Route::has('register'))
+                    @if (Route::has('register'))
                     <div
                         class="lp-button z-0 relative w-36 h-10 mx-14 rounded-xl bg-transparent border-2 border-blue-800">
                         <a href="{{ route('register') }}">
@@ -235,7 +229,7 @@
                             </button>
                         </a>
                     </div>
-                    @endif --}}
+                    @endif
                     @endauth
                 </div>
                 @endif
@@ -3224,7 +3218,7 @@
     <section id="section-5" class="relative flex flex-wrap mx-auto mt-0 pb-10 h-[fit-content]">
         <div id="grid-section-3" class="relative flex flex-wrap mx-auto mt-20 space-y-2" data-aos="fade-up"
             data-aos-duration="1000">
-            <div class="p-4 lg:px-32 flex flex-col mx-auto text-center items-center">
+            <div class="p-4 lg:px-32 flex flex-col mx-auto items-center">
                 <div class="flex bg-opacity-60 bg-white rounded-lg p-8 lg:px-24 flex-col">
                     <div class="w-16 h-16 mb-4 mx-auto inline-flex items-center justify-center flex-shrink-0">
                         <svg viewBox="0 0 20 20">
@@ -3234,10 +3228,10 @@
                         </svg>
                     </div>
                     <div class="flex-grow">
-                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
+                        <h2 class="text-gray-900 text-center text-lg title-font font-medium mb-3">
                             O que é a BioOmiteca Mata Atlântica?
                         </h2>
-                        <p class="leading-relaxed text-base">
+                        <p class="columns-3xs gap-5 leading-relaxed text-base text-justify">
                             Ainda estamos em construção! Será uma plataforma online que integra dados
                             metabolômicos e biogeográficos como estratégia de
                             apoio à bioprospecção, conservação, restauração e cultivo sustentável na Mata Atlântica.

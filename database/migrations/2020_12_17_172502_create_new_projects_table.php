@@ -14,22 +14,30 @@ class CreateNewProjectsTable extends Migration
     public function up()
     {
         Schema::create('new_projects', function (Blueprint $table) {
-            $table->id('id_projeto')->index()->onUpdate('cascade');
-            $table->bigInteger('user_id')->index()->onUpdate('cascade');
-            $table->string('responsavel')->index()->onUpdate('cascade');
-            $table->string('nome_projeto')->index()->onUpdate('cascade');
-            $table->integer('status')->index()->onUpdate('cascade');
-            $table->string('especie')->index()->onUpdate('cascade');
-            $table->string('familia')->nullable();
-            $table->string('nome_popular')->nullable();
-            $table->string('publicacao')->nullable();
-            $table->longText('resumo')->nullable();
-            $table->string('instituicao')->nullable();
-            $table->string('coordenacao')->nullable();
-            $table->string('financiamento')->nullable();
-            $table->string('repositorio')->nullable();
-            $table->string('experimento')->nullable();
+
+            $table->bigIncrements('id_project')->index();
+            $table->string('species')->index();
+            $table->string('species_popular')->index();
+            $table->string('world_flora_link');
+            $table->string('family')->index();
+            $table->string('SISGEN')->index();
+            $table->string('institution')->index();
+            $table->string('coordination')->index();
+            $table->string('financial_support')->index();
+            $table->string('publication_mols')->index()->nullable();
+            $table->string('publication_maps')->index()->nullable();
+            $table->longText('abstract');
+            $table->string('repository_mols')->index()->nullable();
+            $table->string('repository_maps')->index()->nullable();
+            $table->integer('status')->index();
             $table->timestamps();
+
+            // FOREIGN FROM USERS
+            $table->unsignedBigInteger('main_researcher');
+            $table->foreign('main_researcher')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('responsavel');
+            $table->foreign('responsavel')->references('name')->on('users')->onUpdate('cascade')->onDelete('cascade');
+
         });
     }
 
@@ -40,6 +48,7 @@ class CreateNewProjectsTable extends Migration
      */
     public function down()
     {
+        // Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('new_projects');
     }
 }

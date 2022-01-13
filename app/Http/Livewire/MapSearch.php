@@ -12,37 +12,29 @@ use Illuminate\Support\Facades\DB;
 
 class MapSearch extends Component
 {
-
     use WithPagination;
 
-    public $perPage = '5';
-    public $searchMol = '';
-    public $molName;
-    public $mols;
+    public $perPage = '10';
+    public $search = '';
     public $status;
     public $status_0 = 0;
     public $status_1 = 1;
     public $status_2 = 2;
 
-
     public function updatingSearch()
     {
-
         $this->resetPage();
-
     }
 
     public function render()
     {
 
-        $this->mols = DB::table('new_maps')
-            ->where('especie', '=', $this->molName)
-            ->get();
+        $maps = NewMaps::search($this->search)
+            ->where('status', '=', 2)
+            ->paginate($this->perPage);
 
-        return view('livewire.map-search', [
-            'maps' => NewMaps::where('especie', 'like', '%'.$this->searchMol.'%')
-                ->paginate($this->perPage),
-            'mols' => $this->mols,
-        ]);
+        return view('livewire.map-search',
+            compact('maps')
+        );
     }
 }

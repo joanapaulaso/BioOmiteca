@@ -7,7 +7,7 @@
             </svg>
         </button>
         {{-- Dropdown Menu Content --}}
-        <div x-show.transition="open" x-on:click.away="open = false" class="absolute -left-2 top-14 w-52 bg-white shadow-lg rounded-xl cabecalho__responsive--menuLeft">
+        <div x-cloak x-show.transition="open" x-on:click.away="open = false" class="absolute -left-2 top-14 w-52 bg-white shadow-lg rounded-xl cabecalho__responsive--menuLeft">
             <div class="bg-white transition-colors duration-300 hover:bg-blue-400 hover:text-white">
                 <a href="{{ route('home') }}" class="px-1 py-2 sm-screen flex font-extralight">
                     <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -185,7 +185,7 @@
                     Perfil
                 </button>
                 {{-- Dropdown Body Profile --}}
-                <div x-show.transition="open" x-on:click.away="open = false" class="absolute right-0 w-36 mt-2 text-center bg-white border-2 border-blue-400 rounded-lg shadow-xl cabecalho__responsive--menuRight">
+                <div x-cloak x-show.transition="open" x-on:click.away="open = false" class="absolute right-0 w-36 mt-2 text-center bg-white border-2 border-blue-400 rounded-lg shadow-xl cabecalho__responsive--menuRight">
                     {{-- <a href="{{ route('user-profile') }}" class="transition-colors duration-300 block px-4 py-4 text-xs rounded-tr-lg rounded-tl-lg uppercase font-semibold hover:bg-blue-200 tracking-widest">
                         Editar perfil
                     </a>

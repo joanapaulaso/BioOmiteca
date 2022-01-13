@@ -67,17 +67,17 @@ Route::get('my-projects', function () {
     return view('layouts.my-projects');
 })->name('my-projects');
 
-Route::get('equipe', function () {
-    return view('layouts.equipe');
-})->name('equipe');
+Route::get('team', function () {
+    return view('layouts.team');
+})->name('team');
 
-Route::get('contato', function () {
-    return view('layouts.contato');
-})->name('contato');
+Route::get('contact', function () {
+    return view('layouts.contact');
+})->name('contact');
 
-Route::get('sobre', function () {
-    return view('layouts.sobre');
-})->name('sobre');
+Route::get('about', function () {
+    return view('layouts.about');
+})->name('about');
 
 Route::get('curadoria', function () {
     return view('layouts.curadoria');

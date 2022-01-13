@@ -1,33 +1,86 @@
-<div class="mt-20 mb-20 px-48">
-    <div class="text-2xl font-mono font-semibold mb-4">
-        {{ $nome_mol }} na espécie {{ $especie }}
+<div class="mt-20 mb-20 px-4 lg:px-32">
+    <div class="text-2xl font-mono font-semibold mb-4 text-center">
+        {{ $name_mol }} na espécie {{ $species }}
     </div>
     <div class="flex-none w-full">
-        <div class="block h-8 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-blue-200">Estrutura molecular (MolView)</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Estrutura molecular (MolView)</div>
         <div class="block mx-auto text-center py-3">
             <iframe class="w-90/100" frameborder="0" src="https://embed.molview.org/v1/?mode=balls&cid=1183&bg=white"></iframe>
         </div>
-        <div class="block h-8 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-blue-200">Espectro de massas</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Espectro de massas</div>
         <div class="block mx-auto text-center py-3">
             <div class="mx-auto w-90/100 lg:w-3/6">
                 <canvas id="myChart"></canvas>
             </div>
         </div>
-        <div class="block h-8 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-blue-200">Fórmula molecular</div>
+        <div class="block mx-auto text-center py-3">
+            <a href="../../spectra/{{ $spectra_file }}" target="_blank" class="font-semibold text-red-700 underline">
+                Download do espectro
+            </a>
+            <p class="mt-2 text-sm text-gray-600">
+                (formato: m/z,intensidade)
+            </p>
+        </div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Fórmula molecular</div>
         <div class="block mx-auto text-center py-3">{{ $formula }}</div>
-        <div class="block h-8 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-blue-200">Massa (m/z do experimento)</div>
-        <div class="block mx-auto text-center py-3">{{ $massa }}</div>
-        <div class="block h-8 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-blue-200">CID PubChem (link)</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Massa (m/z)</div>
+        <div class="block mx-auto text-center py-3">{{ $mass }}</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">CID PubChem (link)</div>
         <div class="block mx-auto text-center py-3">
             <a href="https://pubchem.ncbi.nlm.nih.gov/compound/{{ $IDPubChem }}" target="_blank" class="text-red-700 underline">
                 {{ $IDPubChem }}
             </a>
         </div>
-        <div class="block h-8 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-blue-200">Aplicabilidade</div>
-        <div class="block mx-auto text-center py-3">{{ $aplicabilidade }}</div>
-        <div class="block h-8 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-blue-200">Referências das aplicabilidades</div>
-        <div class="block mx-auto text-center py-3">{{ $referencia }}</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Aplicabilidade</div>
+        <div class="block mx-auto text-center py-3">{{ $applicability }}</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Referências das aplicabilidades</div>
+        <div class="block mx-auto text-center py-3">{{ $biblio_ref }}</div>
     </div>
+    <div class="mt-10 text-2xl font-mono font-semibold mb-4 text-center">
+        Metadados do experimento
+    </div>
+    <div class="flex-none w-full">
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Instrumento de análise</div>
+        <div class="block mx-auto text-center py-3">{{ $instrument }}</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Modos de ionização</div>
+        <div class="block mx-auto text-center py-3">{{ $ion_mode }}</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Abordagem (alvo, não-alvo)</div>
+        <div class="block mx-auto text-center py-3">{{ $approach }}</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Órgão vegetal</div>
+        <div class="block mx-auto text-center py-3">{{ $plant_organ }}</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Resumo da extração</div>
+        <div class="block mx-auto text-center py-3">{{ $extraction_summary }}</div>
+    </div>
+    <div class="mt-10 text-2xl font-mono font-semibold mb-4 text-center">
+        Metadados do projeto
+    </div>
+    <div class="flex-none w-full">
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Instituição</div>
+        <div class="block mx-auto text-center py-3">{{ $institution }}</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Responsável</div>
+        <div class="block mx-auto text-center py-3">{{ $responsavel }}</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Coordenação do Projeto</div>
+        <div class="block mx-auto text-center py-3">{{ $coordination }}</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Nome popular da espécie</div>
+        <div class="block mx-auto text-center py-3">{{ $species_popular }}</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Família (taxonomia vegetal)</div>
+        <div class="block mx-auto text-center py-3">{{ $family }}</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Cadastro no SISGEN</div>
+        <div class="block mx-auto text-center py-3">{{ $SISGEN }}</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Publicação (link)</div>
+        <div class="block mx-auto text-center py-3">{{ $publication_mols }}</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Repositório de dados (link)</div>
+        <div class="block mx-auto text-center py-3">{{ $repository_mols }}</div>
+    </div>
+    <div class="mt-10 text-2xl font-mono font-semibold mb-4 text-center">
+        Mais sobre a espécie
+    </div>
+    <iframe src="{{ $world_flora_link }}" style="border:0px #ffffff none;" name="species" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="500px" width="100%" allowfullscreen></iframe>
+    {{-- <div class="block">
+        <button wire:click="$emit('destroy', '{{ $id_molecule }}')">
+            REMOVER
+        </button>
+    </div> --}}
 </div>
 
 <script>
@@ -39,7 +92,7 @@
             type: 'bar',
             data: {
                 datasets: [{
-                    label: "{!! $nome_mol !!}",
+                    label: "{!! $name_mol !!}",
                     backgroundColor: "rgba(5, 89, 163, 0.7)",
                     hoverBackgroundColor: "rgba(126, 129, 133, 0.7)",
                     data: spectra.xy,
@@ -73,7 +126,7 @@
         });
     }
     async function getData() {
-        const response = await fetch('../../espectro/{!! $espectro !!}');
+        const response = await fetch('../../spectra/{!! $spectra_file !!}');
         const data = await response.text();
         const xy = [];
         const table = data.split('\n');

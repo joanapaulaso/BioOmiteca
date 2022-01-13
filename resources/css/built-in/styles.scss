@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Megrim&display=swap");
 
+[x-cloak] { display: none !important; }
+
 *::-webkit-scrollbar {
     width: 10px;
     height: 10px;

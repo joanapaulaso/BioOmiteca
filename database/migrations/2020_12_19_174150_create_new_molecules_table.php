@@ -14,25 +14,48 @@ class CreateNewMoleculesTable extends Migration
     public function up()
     {
         Schema::create('new_molecules', function (Blueprint $table) {
-            $table->id('id_molecula')->index();
-            $table->bigInteger('user_id');
-            $table->foreign('user_id')->references('user_id')->on('new_projects');
-            $table->string('responsavel');
-            $table->foreign('responsavel')->references('responsavel')->on('new_projects');
-            $table->string('nome_projeto')->nullable();
-            $table->foreign('nome_projeto')->references('nome_projeto')->on('new_projects');
-            $table->string('especie');
-            $table->foreign('especie')->references('especie')->on('new_projects');
+
+            $table->bigIncrements('id_molecule');
+            $table->string('name_molecule')->index();
+            $table->float('mass');
+            $table->string('adduct');
+            $table->string('formula');
+            $table->integer('IDPubChem');
+            $table->longText('applicability');
+            $table->longText('biblio_ref');
+            $table->string('spectra_file')->index();
+            $table->timestamps();
+
+            // FOREIGN FROM NEW PROJECTS
+            $table->unsignedBigInteger('id_project');
+            $table->foreign('id_project')->references('id_project')->on('new_projects')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('species');
+            $table->foreign('species')->references('species')->on('new_projects')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('species_popular');
+            $table->foreign('species_popular')->references('species_popular')->on('new_projects')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('family');
+            $table->foreign('family')->references('family')->on('new_projects')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('SISGEN');
+            $table->foreign('SISGEN')->references('SISGEN')->on('new_projects')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('institution');
+            $table->foreign('institution')->references('institution')->on('new_projects')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('coordination');
+            $table->foreign('coordination')->references('coordination')->on('new_projects')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('financial_support');
+            $table->foreign('financial_support')->references('financial_support')->on('new_projects')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('publication_mols');
+            $table->foreign('publication_mols')->references('publication_mols')->on('new_projects')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('repository_mols');
+            $table->foreign('repository_mols')->references('repository_mols')->on('new_projects')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('status');
             $table->foreign('status')->references('status')->on('new_projects')->onUpdate('cascade')->onDelete('cascade');
-            $table->string('nome_molecula')->index()->nullable();
-            $table->string('espectro')->index()->nullable();
-            $table->string('formula')->nullable();
-            $table->string('massa')->nullable();
-            $table->string('IDPubChem')->nullable();
-            $table->longText('aplicabilidade')->nullable();
-            $table->string('referencia')->nullable();
-            $table->timestamps();
+
+            // FOREIGN FROM USERS
+            $table->unsignedBigInteger('main_researcher');
+            $table->foreign('main_researcher')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('responsavel');
+            $table->foreign('responsavel')->references('name')->on('users')->onUpdate('cascade')->onDelete('cascade');
+
         });
     }
 
@@ -43,6 +66,7 @@ class CreateNewMoleculesTable extends Migration
      */
     public function down()
     {
+        // Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('new_molecules');
     }
 }

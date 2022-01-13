@@ -68,7 +68,7 @@
         </a>
     </div> --}}
     <div class="transition-colors duration-300 hover:bg-blue-400 hover:text-white">
-        <a href="#" class="px-4 py-2 sm-screen flex font-extralight">
+        <a href="{{ route('about') }}" class="px-4 py-2 sm-screen flex font-extralight">
             <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -78,7 +78,7 @@
         </a>
     </div>
     <div class="transition-colors duration-300 hover:bg-blue-400 hover:text-white">
-        <a href="#" class="px-4 py-2 sm-screen flex font-extralight">
+        <a href="{{ route('team') }}" class="px-4 py-2 sm-screen flex font-extralight">
             <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -108,7 +108,7 @@
         </a>
     </div> --}}
     <div class="transition-colors duration-300 hover:bg-blue-400 hover:text-white">
-        <a href="#" class="px-4 py-2 sm-screen flex font-extralight">
+        <a href="{{ route('contact') }}" class="px-4 py-2 sm-screen flex font-extralight">
             <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

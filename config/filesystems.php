@@ -67,8 +67,8 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
-        public_path('espectro') => storage_path('app/public/espectro'),
+        public_path('spectra') => storage_path('app/public/spectra'),
         public_path('maps') => storage_path('app/public/maps'),
-        public_path('experimento') => storage_path('app/public/experimento'),
+        public_path('experiment') => storage_path('app/public/experiment'),
     ],
 ];

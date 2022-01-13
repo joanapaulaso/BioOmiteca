@@ -9,22 +9,55 @@ class NewMolecules extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'id_molecula';
+    protected $primaryKey = 'id_molecule';
 
     protected $fillable = [
-        'id_molecula',
-        'user_id',
-        'status',
-        'responsavel',
-        'nome_projeto',
-        'especie',
-        'nome_molecula',
+        'id_molecule',
+        'name_molecule',
+        'mass',
         'formula',
-        'massa',
+        'adduct',
         'IDPubChem',
-        'aplicabilidade',
-        'referencia',
-        'espectro',
+        'applicability',
+        'biblio_ref',
+        'spectra_file',
+        'id_project',
+        'species',
+        'species_popular',
+        'family',
+        'SISGEN',
+        'institution',
+        'coordination',
+        'financial_support',
+        'publication_mols',
+        'repository_mols',
+        'status',
+        'main_researcher',
+        'responsavel',
     ];
+
+    public function projects()
+    {
+        return $this->belongsTo(NewProject::class, 'id_project', 'id_project');
+        return $this->belongsTo(NewProject::class, 'species', 'species');
+        return $this->belongsTo(NewProject::class, 'species_popular', 'species_popular');
+        return $this->belongsTo(NewProject::class, 'family', 'family');
+        return $this->belongsTo(NewProject::class, 'SISGEN', 'SISGEN');
+        return $this->belongsTo(NewProject::class, 'institution', 'institution');
+        return $this->belongsTo(NewProject::class, 'coordination', 'coordination');
+        return $this->belongsTo(NewProject::class, 'financial_support', 'financial_support');
+        return $this->belongsTo(NewProject::class, 'publication_mols', 'publication_mols');
+        return $this->belongsTo(NewProject::class, 'repository_mols', 'repository_mols');
+        return $this->belongsTo(NewProject::class, 'status', 'status');
+        return $this->belongsTo(NewProject::class, 'main_researcher', 'main_researcher');
+        return $this->belongsTo(NewProject::class, 'responsavel', 'responsavel');
+    }
+
+    public static function search($query)
+    {
+        return empty($query) ? static::query()
+            : static::where('name_molecule', 'like', '%'. $query .'%')
+                ->orWhere('species', 'like', '%'. $query .'%');
+    }
 
 }

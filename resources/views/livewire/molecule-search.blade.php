@@ -2,9 +2,9 @@
     <div class="mt-5 mx-2">
         <div class="w-11/12 mx-1">
             <label for="search" class="text-md font-medium text-left text-gray-700">
-                Nome ou massa da molécula:
+                Nome da espécie da molécula:
             </label>
-            <input id="search" type="text" wire:model="searchMol" onfocus="this.value=''" placeholder="Digite o termo da busca"
+            <input id="search" type="text" wire:model="search" onfocus="this.value=''" placeholder="Digite o termo da busca"
                 class="w-full mt-2 border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
         </div>
         <div class="mx-1 mt-2">
@@ -50,39 +50,43 @@
                                         Massa molecular</th>
                                     <th scope="col"
                                         class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
+                                        Status</th>
+                                    <th scope="col"
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($molecules as $molecule)
-                                    <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm text-center leading-5">
-                                            {{ $molecule->id_molecula }}</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm text-center leading-5">
-                                            {{ $molecule->nome_molecula }}</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm leading-5">
-                                            {{ $molecule->especie }}</td>
-                                        <td class="hidden">{{ $molecule->nome_projeto }}</td>
-                                        <td class="hidden">{{ $molecule->aplicabilidade }}</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm leading-5">
-                                            {{ $molecule->formula }}</td>
-                                        <td class="hidden">{{ $molecule->espectro }}</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm leading-5">
-                                            {{ $molecule->massa }}</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-no-wrap border-b text-gray-800 border-gray-200 text-sm leading-5">
-                                            <a href="/mol/{{ $molecule->id_molecula }}">
-                                                <button class="flex p-3 rounded-lg bg-green-400 font-semibold text-xs uppercase text-center tracking-wider focus:outline-none focus:ring-2 focus:ring-green-500">
-                                                    Visualizar
-                                                </button>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm text-center leading-5">
+                                                {{ $molecule->id_molecule }}</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm text-center leading-5">
+                                                {{ $molecule->name_molecule }}</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm leading-5">
+                                                {{ $molecule->species }}</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm leading-5">
+                                                {{ $molecule->formula }}</td>
+                                            <td class="hidden">{{ $molecule->spectra_file }}</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm leading-5">
+                                                {{ $molecule->mass }}</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm leading-5">
+                                                {{ $molecule->status }}</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-no-wrap border-b text-gray-800 border-gray-200 text-sm leading-5">
+                                                <a href="/mol/{{ $molecule->id_molecule }}">
+                                                    <button class="flex p-3 rounded-lg bg-green-400 font-semibold text-xs uppercase text-center tracking-wider focus:outline-none focus:ring-2 focus:ring-green-500">
+                                                        Visualizar
+                                                    </button>
+                                                </a>
+                                            </td>
+                                        </tr>
                                 @endforeach
                             </tbody>
                         </table>
