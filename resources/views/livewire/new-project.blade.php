@@ -246,7 +246,7 @@
                                         <label for="mass" class="font-thin">Massa molecular (m/z)</label>
                                     </div>
                                     <div class="mx-1">
-                                        <input type="number" step="any" wire:model="mass.0" maxlength="100" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
+                                        <input type="number" step="0.0001" wire:model="mass.0" maxlength="100" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
                                     </div>
                                     @error('mass') <p class="text-red-600 text-sm"><br>{{ $message }}</p> @enderror
                                 </div>
@@ -378,7 +378,7 @@
                                         <label for="mass" class="font-thin">Massa molecular (m/z)</label>
                                     </div>
                                     <div class="mx-1">
-                                        <input type="number" step="any" wire:model="mass.{{ $value }}" maxlength="100" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
+                                        <input type="number" step="0.0001" wire:model="mass.{{ $value }}" maxlength="100" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
                                     </div>
                                     @error('mass') <p class="text-red-600 text-sm"><br>{{ $message }}</p> @enderror
                                 </div>

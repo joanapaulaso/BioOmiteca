@@ -17,7 +17,7 @@ class CreateNewMoleculesTable extends Migration
 
             $table->bigIncrements('id_molecule');
             $table->string('name_molecule')->index();
-            $table->float('mass');
+            $table->float('mass', 8, 4);
             $table->string('adduct');
             $table->string('formula');
             $table->integer('IDPubChem');
