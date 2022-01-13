@@ -46,7 +46,7 @@ class CreateNewMapsTable extends Migration
             $table->foreign('coordination')->references('coordination')->on('new_projects')->onUpdate('cascade')->onDelete('cascade');
             $table->string('financial_support');
             $table->foreign('financial_support')->references('financial_support')->on('new_projects')->onUpdate('cascade')->onDelete('cascade');
-            $table->string('publication_maps');
+            $table->string('publication_maps')->nullable();
             $table->foreign('publication_maps')->references('publication_maps')->on('new_projects')->onUpdate('cascade')->onDelete('cascade');
             $table->string('repository_maps');
             $table->foreign('repository_maps')->references('repository_maps')->on('new_projects')->onUpdate('cascade')->onDelete('cascade');
