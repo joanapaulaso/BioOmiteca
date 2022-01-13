@@ -286,7 +286,7 @@
                                         <label for="biblio_ref" class="font-thin">Artigos de referência (aplicabilidades)</label>
                                     </div>
                                     <div class="mx-1">
-                                        <input type="text" wire:model="biblio_ref.0" maxlength="100" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
+                                        <input type="text" wire:model="biblio_ref.0" maxlength="1000" class="w-full border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
                                     </div>
                                     @error('biblio_ref') <p class="text-red-600 text-sm"><br>{{ $message }}</p> @enderror
                                 </div>
