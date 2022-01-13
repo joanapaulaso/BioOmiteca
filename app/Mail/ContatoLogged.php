@@ -30,6 +30,6 @@ class ContatoLogged extends Mailable
      */
     public function build()
     {
-        return $this->subject('Novo contato BioOmiteca')->view('template_email')->with('data', $this->data);
+        return $this->subject('Novo contato BioOmiteca')->view('livewire.template_email_logged')->with('data', $this->data);
     }
 }
