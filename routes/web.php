@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\CreatedProject;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ContatoController;
+use App\Http\Controllers\ContatoControllerLogged;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,7 @@ Route::get('/', function () {
 });
 
 Route::post('contato/send', [ContatoController::class, 'send']);
+Route::post('contato-logged/send', [ContatoControllerLogged::class, 'send']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

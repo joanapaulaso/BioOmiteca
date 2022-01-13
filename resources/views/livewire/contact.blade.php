@@ -4,7 +4,7 @@
             Contato
         </p>
     </div>
-    <form method="POST" action="{{ url('contato/send') }}">
+    <form method="POST" action="{{ url('contato-logged/send') }}">
         {{ csrf_field() }}
         <div class="grid grid-cols-1 gap-6">
             <div class="col-span-1">
@@ -42,8 +42,8 @@
             </button>
         </div>
     </form>
-    @if($message = Session::get('success'))
-    <div id="sent-message" class="mt-2">
+    @if($message = Session::get('success-logged'))
+    <div id="sent-message-logged" class="mt-2">
         <p>
             {{ $message }}
         </p>
