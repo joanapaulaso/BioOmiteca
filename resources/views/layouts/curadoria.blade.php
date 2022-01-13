@@ -27,14 +27,13 @@
             <aside class="relative bg-gray-100">
                 @include('layouts.menu')
             </aside>
-            @if(Auth::user()->is_admin == 1 || Auth::user()->is_admin == 9)
+            @if(Auth::user()->is_admin == 9)
             <main class="relative w-full bg-white">
                 @livewire('curadoria')
             </main>
-            @endif
-            @if(Auth::user()->is_admin == 0)
+            @else
             <main class="relative w-full bg-white">
-                @livewire('created-project')
+                @livewire('sem-acesso')
             </main>
             @endif
         </div>
