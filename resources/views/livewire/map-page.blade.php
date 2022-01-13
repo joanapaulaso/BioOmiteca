@@ -1,6 +1,6 @@
 <div class="mt-20 mb-20 px-4 md:px-48">
     <div class="text-2xl font-mono font-semibold mb-4">
-        Modelagem ecológica da espécie {{ $species }}
+        Modelagem ecológica da espécie <span class="italic">{{ $species }}</span>
     </div>
     <div class="mt-10 text-2xl font-mono font-semibold mb-4 text-center">
         Resumo da modelagem

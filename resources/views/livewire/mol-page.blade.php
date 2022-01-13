@@ -1,6 +1,6 @@
 <div class="mt-20 mb-20 px-4 lg:px-32">
     <div class="text-2xl font-mono font-semibold mb-4 text-center">
-        {{ $name_mol }} na espécie {{ $species }}
+        {{ $name_mol }} na espécie <span class="italic">{{ $species }}</span>
     </div>
     <div class="flex-none w-full">
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Estrutura molecular (MolView)</div>
@@ -34,7 +34,9 @@
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Aplicabilidade</div>
         <div class="block mx-auto text-center py-3">{{ $applicability }}</div>
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Referências das aplicabilidades</div>
-        <div class="block mx-auto text-center py-3">{{ $biblio_ref }}</div>
+        <a href="{{ $biblio_ref }}" target="_blank" class="text-red-700 underline">
+            {{ $biblio_ref }}
+        </a>
     </div>
     <div class="mt-10 text-2xl font-mono font-semibold mb-4 text-center">
         Metadados do experimento
@@ -68,9 +70,13 @@
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Cadastro no SISGEN</div>
         <div class="block mx-auto text-center py-3">{{ $SISGEN }}</div>
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Publicação (link)</div>
-        <div class="block mx-auto text-center py-3">{{ $publication_mols }}</div>
+        <a href="{{ $publication_mols }}" target="_blank" class="text-red-700 underline">
+            {{ $publication_mols }}
+        </a>
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Repositório de dados (link)</div>
-        <div class="block mx-auto text-center py-3">{{ $repository_mols }}</div>
+        <a href="{{ $repository_mols }}" target="_blank" class="text-red-700 underline">
+            {{ $repository_mols }}
+        </a>
     </div>
     <div class="mt-10 text-2xl font-mono font-semibold mb-4 text-center">
         Mais sobre a espécie
