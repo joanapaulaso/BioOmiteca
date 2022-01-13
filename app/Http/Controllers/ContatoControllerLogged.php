@@ -17,6 +17,6 @@ class ContatoControllerLogged extends Controller
         );
 
         Mail::to('contato@bioomiteca.com')->send(new ContatoLogged($data));
-        return redirect('/#sent-message-logged')->with('success-logged', 'Agradecemos o seu contato!');
+        return redirect('/contact/#sent-message-logged')->with('success-logged', 'Agradecemos o seu contato!');
     }
 }
