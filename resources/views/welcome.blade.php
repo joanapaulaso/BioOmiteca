@@ -3218,7 +3218,7 @@
     <section id="section-5" class="relative flex flex-wrap mx-auto mt-0 pb-10 h-[fit-content]">
         <div id="grid-section-3" class="relative flex flex-wrap mx-auto mt-20 space-y-2" data-aos="fade-up"
             data-aos-duration="1000">
-            <div class="p-4 lg:px-32 flex flex-col mx-auto items-center">
+            <div class="p-4 lg:px-32 flex flex-col mx-auto text-center items-center">
                 <div class="flex bg-opacity-60 bg-white rounded-lg p-8 lg:px-24 flex-col">
                     <div class="w-16 h-16 mb-4 mx-auto inline-flex items-center justify-center flex-shrink-0">
                         <svg viewBox="0 0 20 20">
@@ -3232,19 +3232,19 @@
                             O que é a BioOmiteca Mata Atlântica?
                         </h2>
                         <p class="leading-relaxed text-base">
-                            Ainda estamos em construção! Será uma plataforma online que integra dados
+                            É uma plataforma online que integra dados
                             metabolômicos e biogeográficos como estratégia de
                             apoio à bioprospecção, conservação, restauração e cultivo sustentável na Mata Atlântica.
                             O público-alvo compreende desde produtores agrícolas interessados em cultivo sustentável,
                             comunidades tradicionais até o poder público envolvido no setor ambiental.
                             É necessário realizar o cadastro para acessar as informações aqui divulgadas.
                         </p>
-                        <a class="mt-3 text-gray-500 inline-flex items-center">Saiba mais
+                        {{-- <a class="mt-3 text-gray-500 inline-flex items-center">Saiba mais
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg>
-                        </a>
+                        </a> --}}
                     </div>
                 </div>
             </div>
@@ -3271,12 +3271,12 @@
                             Não obstante, o desenvolvimento econômico sustentável <b>depende da conservação da
                                 biodiversidade.</b>
                         </p>
-                        <a class="mt-3 text-gray-500 inline-flex items-center">Saiba mais
+                        {{-- <a class="mt-3 text-gray-500 inline-flex items-center">Saiba mais
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg>
-                        </a>
+                        </a> --}}
                     </div>
                 </div>
             </div>
@@ -3335,12 +3335,12 @@
                             informação para incrementar sua renda ao mesmo tempo em que ajudam à conservar espécies
                             nativas com potencial bioeconômico do bioma Mata Atlântica.
                         </p>
-                        <a class="mt-3 text-gray-500 inline-flex items-center">Saiba mais
+                        {{-- <a class="mt-3 text-gray-500 inline-flex items-center">Saiba mais
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg>
-                        </a>
+                        </a> --}}
                     </div>
                 </div>
             </div>
