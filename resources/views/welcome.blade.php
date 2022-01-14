@@ -3231,7 +3231,7 @@
                         <h2 class="text-gray-900 text-center text-lg title-font font-medium mb-3">
                             O que é a BioOmiteca Mata Atlântica?
                         </h2>
-                        <p class="columns-3xs gap-5 leading-relaxed text-base text-justify">
+                        <p class="leading-relaxed text-base">
                             Ainda estamos em construção! Será uma plataforma online que integra dados
                             metabolômicos e biogeográficos como estratégia de
                             apoio à bioprospecção, conservação, restauração e cultivo sustentável na Mata Atlântica.
