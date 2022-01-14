@@ -1,4 +1,4 @@
-![Logo BioOmiteca](https://www.bioomiteca.com/images/logo-bioomiteca.svg)
+![Logo BioOmiteca](https://www.bioomiteca.com/images/logo-bioomiteca.png)
 
 ## BioOmiteca Mata Atlântica
 
