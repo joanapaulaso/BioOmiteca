@@ -13,7 +13,7 @@
             Conservation is effective in protecting these species. On the other hand, areas of suitability of species
             represent places with the potential to carry out sustainable cultivation.
         </p>
-        <p>
+        <p class="mt-12 font-semibold">
             🧐 We are still developing the ecological modeling page, though! ✍
         </p>
         <p class="mt-12 font-mono text-lg font-semibold">
