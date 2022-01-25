@@ -4,7 +4,7 @@
             <label for="search" class="text-md font-medium text-left text-gray-700">
                 Search for species or molecule:
             </label>
-            <input id="search" type="text" wire:model="search" onfocus="this.value=''" placeholder="Digite o termo da busca"
+            <input id="search" type="text" wire:model="search" onfocus="this.value=''" placeholder="Please, type and wait."
                 class="w-full mt-2 border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
         </div>
         <div class="mx-1 mt-2">
