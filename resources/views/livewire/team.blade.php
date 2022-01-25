@@ -1,6 +1,6 @@
 <div class="mx-auto mt-32 mb-20 px-4 lg:px-32">
     <p class="text-3xl font-mono font-semibold mb-4">
-        Equipe
+        Team
     </p>
     <div class="mt-10">
         <div class="rounded-md shadow-md p-10 text-center bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">
@@ -13,11 +13,11 @@
                         Joana Paula da Silva Oliveira
                     </p>
                     <p class="mt-12">
-                        Pesquisadora em Ciências Biológicas e desenvolvedora da plataforma BioOmiteca Mata Atlântica
+                        Researcher in Biological Sciences and developer of the BioOmiteca Atlantic Forest platform
                     </p>
                     <p class="mt-5 font-semibold underline text-blue-800">
                         <a href="https://publons.com/researcher/3931751/joana-paula-da-silva-oliveira/" target="_blank">
-                            Currículo
+                            Curriculum
                         </a>
                     </p>
                     <p class="mt-5 text-2xl">
@@ -36,12 +36,12 @@
                         Andrea Furtado Macedo
                     </p>
                     <p class="mt-12">
-                        Professora do Departamento de Botânica da Universidade Federal do Estado do Rio de Janeiro (UNIRIO)
-                        Orientadora do projeto BioOmiteca Mata Atlântica.
+                        Professor at the Department of Botany at the Federal University of the State of Rio de Janeiro (UNIRIO)
+                        Supervisor of the BioOmiteca Mata Atlântica project.
                     </p>
                     <p class="mt-5 font-semibold underline text-blue-800">
                         <a href="https://publons.com/researcher/3840217/andrea-furtado-macedo/" target="_blank">
-                            Currículo
+                            Curriculum
                         </a>
                     </p>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 147.546 169.546" class="mt-8 mx-auto w-16">
@@ -68,12 +68,12 @@
                         Maria Lucia Lorini
                     </p>
                     <p class="mt-12">
-                        Professora no Departamento de Ciências Naturais da Universidade Federal do Estado do Rio de Janeiro (UNIRIO)
-                        Orientadora do projeto BioOmiteca Mata Atlântica.
+                        Professor at the Department of Natural Sciences at the Federal University of the State of Rio de Janeiro (UNIRIO)
+                        Supervisor of the BioOmiteca Mata Atlântica project.
                     </p>
                     <p class="mt-5 font-semibold underline text-blue-800">
                         <a href="https://publons.com/researcher/2511340/maria-lucia-lorini/" target="_blank">
-                            Currículo
+                            Curriculum
                         </a>
                     </p>
                     <p class="mt-5 text-2xl">
