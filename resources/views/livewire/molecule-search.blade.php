@@ -66,7 +66,7 @@
                                                 class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm text-center leading-5">
                                                 {{ $molecule->name_molecule }}</td>
                                             <td
-                                                class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm leading-5">
+                                                class="px-6 italic py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm leading-5">
                                                 {{ $molecule->species }}</td>
                                             <td
                                                 class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm leading-5">
