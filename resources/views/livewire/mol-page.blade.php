@@ -1,13 +1,13 @@
 <div class="mt-20 mb-20 px-4 lg:px-32">
     <div class="text-2xl font-mono font-semibold mb-4 text-center">
-        {{ $name_mol }} na espécie <span class="italic">{{ $species }}</span>
+        {{ $name_mol }} in the species <span class="italic">{{ $species }}</span>
     </div>
     <div class="flex-none w-full">
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Estrutura molecular (MolView)</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Molecular structure (MolView)</div>
         <div class="block mx-auto text-center py-3">
             <iframe class="w-90/100" frameborder="0" src="https://embed.molview.org/v1/?mode=balls&cid=1183&bg=white"></iframe>
         </div>
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Espectro de massas</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Mass spectra</div>
         <div class="block mx-auto text-center py-3">
             <div class="mx-auto w-90/100 lg:w-3/6">
                 <canvas id="myChart"></canvas>
@@ -15,15 +15,15 @@
         </div>
         <div class="block mx-auto text-center py-3">
             <a href="../../spectra/{{ $spectra_file }}" target="_blank" class="font-semibold text-red-700 underline">
-                Download do espectro
+                Spectra download
             </a>
             <p class="mt-2 text-sm text-gray-600">
-                (formato: m/z,intensidade)
+                (format: m/z,intensity)
             </p>
         </div>
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Fórmula molecular</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Molecular formula</div>
         <div class="block mx-auto text-center py-3">{{ $formula }}</div>
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Massa (m/z)</div>
+        <div class="block italic h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">m/z</div>
         <div class="block mx-auto text-center py-3">{{ $mass }}</div>
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">CID PubChem (link)</div>
         <div class="block mx-auto text-center py-3">
@@ -31,9 +31,9 @@
                 {{ $IDPubChem }}
             </a>
         </div>
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Aplicabilidade</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Applicability</div>
         <div class="block mx-auto text-center py-3">{{ $applicability }}</div>
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Referências das aplicabilidades</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Applicability references</div>
         <div class="block mx-auto text-center py-3">
             <a href="{{ $biblio_ref }}" target="_blank" class="text-red-700 underline">
                 {{ $biblio_ref }}
@@ -44,11 +44,11 @@
         Metadados do experimento
     </div>
     <div class="flex-none w-full">
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Instrumento de análise</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Analysis instrument</div>
         <div class="block mx-auto text-center py-3">{{ $instrument }}</div>
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Modos de ionização</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Ionization modes</div>
         <div class="block mx-auto text-center py-3">{{ $ion_mode }}</div>
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Abordagem (alvo, não-alvo)</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Approach (targeted/untargeted)</div>
         <div class="block mx-auto text-center py-3">{{ $approach }}</div>
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Órgão vegetal</div>
         <div class="block mx-auto text-center py-3">{{ $plant_organ }}</div>
