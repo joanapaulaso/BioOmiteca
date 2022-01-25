@@ -1,7 +1,7 @@
 <div class="mt-32 mb-20 px-4 lg:px-48">
     <div class="rouded-lg shadow-md p-20 text-center bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">
         <p>
-            <strong>BioOmiteca Mata Atlântica</strong> is a digital platform for the integration of metabolomic and biogeographic data on species from the Atlantic Forest. But what does that mean? 🤔
+            <strong>BioOmiteca Atlantic Forest</strong> is a digital platform for the integration of metabolomic and biogeographic data on species from the Atlantic Forest. But what does that mean? 🤔
         </p>
         <p class="mt-12">
             The integration of these types of data has a very simple and, at the same time, essential purpose:
