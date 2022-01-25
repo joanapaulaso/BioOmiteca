@@ -48,9 +48,9 @@
                                     <th scope="col"
                                         class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
                                         Massa molecular</th>
-                                    <th scope="col"
+                                    {{-- <th scope="col"
                                         class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
-                                        Status</th>
+                                        Status</th> --}}
                                     <th scope="col"
                                         class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
                                     </th>
@@ -75,9 +75,9 @@
                                             <td
                                                 class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm leading-5">
                                                 {{ $molecule->mass }}</td>
-                                            <td
+                                            {{-- <td
                                                 class="px-6 py-4 whitespace-no-wrap border-b text-gray-500 border-gray-200 text-sm leading-5">
-                                                {{ $molecule->status }}</td>
+                                                {{ $molecule->status }}</td> --}}
                                             <td
                                                 class="px-6 py-4 whitespace-no-wrap border-b text-gray-800 border-gray-200 text-sm leading-5">
                                                 <a href="/mol/{{ $molecule->id_molecule }}">
