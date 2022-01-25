@@ -2,14 +2,14 @@
     <div class="mt-5 mx-2">
         <div class="w-11/12 mx-1">
             <label for="search" class="text-md font-medium text-left text-gray-700">
-                Nome da espécie da molécula:
+                Search for species or molecule:
             </label>
             <input id="search" type="text" wire:model="search" onfocus="this.value=''" placeholder="Digite o termo da busca"
                 class="w-full mt-2 border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
         </div>
         <div class="mx-1 mt-2">
             <label for="per-page" class="text-md font-medium text-left text-gray-700 mb-2">
-                Resultados por página:
+                Results per page:
             </label>
             <select id="per-page" wire:model='perPage'
                 class="border border-blue-400 focus-within:outline-none focus:ring-2 focus:ring-blue-400 rounded-md">
@@ -22,7 +22,7 @@
     </div>
     <div class="w-full mt-8 m-3 white rounded-md text-left">
         <p class="flex text-2xl font-light text-left text-gray-700 p-0 lg:p-3 mb-3 uppercase">
-            Resultado da busca
+            Search results
         </p>
         <div class="flex flex-col mr-7">
             <div class="-my-2">
@@ -36,18 +36,18 @@
                                         ID</th>
                                     <th scope="col"
                                         class="px-6 py-3 text-center text-xs font-medium text-gray-600 uppercase tracking-wider">
-                                        Molécula</th>
+                                        Molecule</th>
                                     <th scope="col"
                                         class="px-6 py-3 text-center text-xs font-medium text-gray-600 uppercase tracking-wider">
-                                        Espécie</th>
-                                    <th scope="col" class="hidden">Projeto</th>
+                                        Species</th>
+                                    <th scope="col" class="hidden">Project</th>
                                     <th scope="col"
                                         class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
-                                        Fórmula</th>
-                                    <th scope="col" class="hidden">Espectro</th>
+                                        Formula</th>
+                                    <th scope="col" class="hidden">Spectra</th>
                                     <th scope="col"
                                         class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
-                                        Massa molecular</th>
+                                        Monoisotopic mass</th>
                                     {{-- <th scope="col"
                                         class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
                                         Status</th> --}}
@@ -82,7 +82,7 @@
                                                 class="px-6 py-4 whitespace-no-wrap border-b text-gray-800 border-gray-200 text-sm leading-5">
                                                 <a href="/mol/{{ $molecule->id_molecule }}">
                                                     <button class="flex p-3 rounded-lg bg-green-400 font-semibold text-xs uppercase text-center tracking-wider focus:outline-none focus:ring-2 focus:ring-green-500">
-                                                        Visualizar
+                                                        Open
                                                     </button>
                                                 </a>
                                             </td>
