@@ -1,5 +1,7 @@
+import Alpine from 'alpinejs'
+
 require('./bootstrap');
 
-require('alpinejs');
+window.Alpine = Alpine
 
-require('./custom');
+Alpine.start()

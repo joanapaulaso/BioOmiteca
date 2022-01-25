@@ -1,7 +1,7 @@
 <div class="flex px-52 z-0 mt-16 overflow-x-auto">
     <div class="w-full m-5 white rounded-md text-left">
         <p class="flex flex-shrink w-full font-medium text-center text-gray-700 p-5 mt-3 mb-3 rounded-lg shadow-lg bg-green-300">
-            Seu projeto foi enviado com sucesso! Acompanhe aqui as atualizações da curadoria.
+            Your project has been sent successfully! Now follow the curatorship updates.
         </p>
         <div class="align-middle inline-block shadow bg-white shadow-dashboard px-8 pt-3 rounded-bl-lg rounded-br-lg">
             <table>

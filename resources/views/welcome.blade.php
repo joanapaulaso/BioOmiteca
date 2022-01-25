@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>BioOmiteca Mata Atlântica</title>
+    {{-- <script src="//unpkg.com/alpinejs" defer></script> --}}
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <title>BioOmiteca Atlantic Forest</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga&display=swap" rel="stylesheet">
@@ -39,16 +40,9 @@
                 </div>
                 <div id="menu-box"
                     class="absolute hidden top-20 left-0 shadow-lg bg-white pb-10 pl-5 pr-10 transition-opacity rounded-br-2xl">
-                    <div class="hidden uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-5 mt-5">
-                        sobre nós</div>
-                    <div class="hidden uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-5 mt-5">
-                        publicações</div>
-                    <div class="hidden uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-5 mt-5">
-                        equipe
-                    </div>
                     <div class="uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-5 mt-5">
                         <a href="#section-6">
-                            contato
+                            contact
                         </a>
                     </div>
                     <div class="mx-auto">
@@ -60,7 +54,7 @@
                                 <a href="{{ url('/home') }}">
                                     <button
                                         class="z-10 absolute font-quicksand font-semibold uppercase bottom-1 right-2 w-28 text-center inline-block px-4 py-2 rounded-xl bg-blue-800 text-gray-100 focus:outline-none hover:bg-blue-700 hover:text-gray-200 focus-within:ring-2 focus-within:ring-blue-500">
-                                        Acessar
+                                        Access
                                     </button>
                                 </a>
                             </div>
@@ -80,7 +74,7 @@
                                 <a href="{{ route('register') }}">
                                     <button
                                         class="z-10 absolute font-quicksand font-semibold uppercase bottom-1 right-2 w-36 text-center inline-block px-4 py-2 rounded-xl bg-blue-800 text-gray-100 focus:outline-none hover:bg-blue-700 hover:text-gray-200 focus-within:ring-2 focus-within:ring-blue-500">
-                                        Cadastre-se
+                                        Register
                                     </button>
                                 </a>
                             </div>
@@ -181,19 +175,9 @@
         </div>
         <div class="lp-menu flex flex-wrap mx-auto mt-5">
             <img src="{{ url('images/plant_right.png') }}" alt="Plants" id="header-plant" class="hidden">
-            <div
-                class="hidden lp-menu-item uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-14 mt-5">
-                sobre nós</div>
-            <div
-                class="hidden lp-menu-item uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-14 mt-5">
-                publicações</div>
-            <div
-                class="hidden lp-menu-item uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-14 mt-5">
-                equipe
-            </div>
             <div class="lp-menu-item uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-14 mt-5">
                 <a href="#section-6">
-                    contato
+                    contact
                 </a>
             </div>
             <div class="mx-auto">
@@ -205,7 +189,7 @@
                         <a href="{{ route('home') }}">
                             <button
                                 class="z-10 absolute font-quicksand font-semibold uppercase bottom-1 right-2 w-28 text-center inline-block px-4 py-2 rounded-xl bg-blue-800 text-gray-100 focus:outline-none hover:bg-blue-700 hover:text-gray-200 focus-within:ring-2 focus-within:ring-blue-500">
-                                Acessar
+                                Access
                             </button>
                         </a>
                     </div>
@@ -225,7 +209,7 @@
                         <a href="{{ route('register') }}">
                             <button
                                 class="z-10 absolute font-quicksand font-semibold uppercase bottom-1 right-2 w-36 text-center inline-block px-4 py-2 rounded-xl bg-blue-800 text-gray-100 focus:outline-none hover:bg-blue-700 hover:text-gray-200 focus-within:ring-2 focus-within:ring-blue-500">
-                                Cadastre-se
+                                Register
                             </button>
                         </a>
                     </div>
@@ -248,18 +232,49 @@
         <img src="{{ url('images/plant_right.png') }}" alt="Flower" id="plant-right" class="invisible lg:visible h-0 lg:h-auto">
         <img src="{{ url('images/plant_left.png') }}" alt="Flower" id="plant-left" class="invisible lg:visible h-0 lg:h-auto">
         <img src="{{ url('images/stalk-h.png') }}" alt="Flower" id="stalk-h1" class="invisible lg:visible h-0 lg:h-auto">
-        <img src="{{ url('images/ma-background.png') }}" alt="Fundo" id="fundo" class="rellax" data-rellax-speed="5"
-            class="invisible lg:visible">
-        <div class="flex-1" id="section-2-1">
+        <img src="{{ url('images/ma-background.png') }}" alt="Fundo" id="fundo" class="rellax" data-rellax-speed="5" class="invisible lg:visible">
+        <div class="flex-1 relative" id="section-2-1">
             <div class="mt-14 -mr-14">
                 <p id="section-2-1-title" class="z-50 text-right tracking-widest">
-                    Mata Atlântica
+                    Atlantic Forest
                 </p>
                 <p id="section-2-1-subtitle"
                     class="ml-48 z-50 font-quicksand font-semibold text-3xl text-right tracking-wider">
-                    hotspot de biodiversidade, oportunidades
-                    sustentáveis para a bioeconomia
+                    biodiversity hotspot,
+                    sustainable oportunities for the bioeconomy
                 </p>
+                <div x-data="{ openTranslate: false }" class="mt-20 text-center text-sm md:z-50 md:absolute md:right-[-3rem]  md:mr-3 md:float-right">
+                    <button @click="openTranslate = !openTranslate" type="button" class="uppercase underline font-quicksand text-md font-semibold hover:text-blue-700">
+                        translate
+                    </button>
+                    <div
+                        x-cloak
+                        x-show="openTranslate"
+                        @keydown.escape.prevent.stop="openTranslate = false"
+                        role="diolog"
+                        aria-modal="true"
+                        aria-labelledby="modal-title"
+                        class="z-50 absolute w-60 h-[13rem] p-8 bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50 rounded-lg shadow-lg">
+                        <div @click="openTranslate = false" class="absolute right-3 top-3 cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <p>
+                            Translate this page to:
+                        </p>
+                        <div id="translate" class="w-48 h-10"></div>
+                        <script type="text/javascript">
+                            function googleTranslateElementInit() {
+                                new google.translate.TranslateElement(
+                                    {pageLanguage: 'en'},
+                                    'translate'
+                                );
+                            }
+                        </script>
+                        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                    </div>
+                </div>
             </div>
             <svg id="section-1-circle-arrow" id="svg1206" viewBox="0 0 43.98 43.98">
                 <defs id="defs1200">
@@ -3205,22 +3220,19 @@
             <div class="flex-1">
                 <div id="text-section-4" class="mx-auto my-auto">
                     <p class="font-quicksand font-semibold text-2xl text-center -ml-20 mr-20">
-                        Bioeconomia pressupõe a conservação da natureza. Para aproveitarmos os benefícios da Mata
-                        Atlântica, precisamos fazê-lo de mãos dadas com a sustentabilidade. Por essa razão, a divulgação
-                        do potencial bioeconômico de espécies da Mata Atlântica deve ocorrer de mãos dadas com
-                        informações imprescindíveis à sua preservação e uso sustentável.
+                        Bioeconomy presupposes the conservation of nature. To take advantage of the benefits of the Atlantic Forest, we need to do it hand in hand with sustainability. For this reason, the dissemination of the bioeconomic potential of Atlantic Forest species must go hand in hand with information essential to their preservation and sustainable use.
                     </p>
                 </div>
             </div>
         </div>
     </section>
     <!-- Section 5 -->
-    <section id="section-5" class="relative flex flex-wrap mx-auto mt-0 pb-10 h-[fit-content]">
+    <section id="section-5" class="relative flex flex-wrap mx-auto mt-0 pb-24 h-[fit-content]">
         <div id="grid-section-3" class="relative flex flex-wrap mx-auto mt-20 space-y-2" data-aos="fade-up"
             data-aos-duration="1000">
             <div class="p-4 lg:px-32 flex flex-col mx-auto text-center items-center">
-                <div class="flex bg-opacity-60 bg-white rounded-lg p-8 lg:px-24 flex-col">
-                    <div class="w-16 h-16 mb-4 mx-auto inline-flex items-center justify-center flex-shrink-0">
+                <div class="flex py-12 bg-opacity-60 bg-white rounded-lg p-8 lg:px-24 flex-col">
+                    <div class="w-16 h-16 mb-8 mx-auto inline-flex items-center justify-center flex-shrink-0">
                         <svg viewBox="0 0 20 20">
                             <path fill="#000000"
                                 d="M17.125,1.375H2.875c-0.828,0-1.5,0.672-1.5,1.5v11.25c0,0.828,0.672,1.5,1.5,1.5H7.75v2.25H6.625c-0.207,0-0.375,0.168-0.375,0.375s0.168,0.375,0.375,0.375h6.75c0.207,0,0.375-0.168,0.375-0.375s-0.168-0.375-0.375-0.375H12.25v-2.25h4.875c0.828,0,1.5-0.672,1.5-1.5V2.875C18.625,2.047,17.953,1.375,17.125,1.375z M11.5,17.875h-3v-2.25h3V17.875zM17.875,14.125c0,0.414-0.336,0.75-0.75,0.75H2.875c-0.414,0-0.75-0.336-0.75-0.75v-1.5h15.75V14.125z M17.875,11.875H2.125v-9c0-0.414,0.336-0.75,0.75-0.75h14.25c0.414,0,0.75,0.336,0.75,0.75V11.875z M10,14.125c0.207,0,0.375-0.168,0.375-0.375S10.207,13.375,10,13.375s-0.375,0.168-0.375,0.375S9.793,14.125,10,14.125z">
@@ -3228,61 +3240,43 @@
                         </svg>
                     </div>
                     <div class="flex-grow">
-                        <h2 class="text-gray-900 text-center text-lg title-font font-medium mb-3">
-                            O que é a BioOmiteca Mata Atlântica?
+                        <h2 class="text-gray-900 text-center text-lg title-font font-medium mb-8">
+                            What is the BioOmiteca Atlantic Forest?
                         </h2>
-                        <p class="leading-relaxed text-base">
-                            É uma plataforma online que integra dados
-                            metabolômicos e biogeográficos como estratégia de
-                            apoio à bioprospecção, conservação, restauração e cultivo sustentável na Mata Atlântica.
-                            O público-alvo compreende desde produtores agrícolas interessados em cultivo sustentável,
-                            comunidades tradicionais até o poder público envolvido no setor ambiental.
-                            É necessário realizar o cadastro para acessar as informações aqui divulgadas.
+                        <p class="leading-relaxed text-base mb-8">
+                            It is an online platform that integrates metabolomic and biogeographic data as a strategy to support bioprospection, conservation, restoration and sustainable cultivation in the Atlantic Forest. The target audience ranges from agricultural producers interested in sustainable cultivation, traditional communities and public authorities involved in the environmental sector. Registration is required to access the information here disclosed.
                         </p>
-                        {{-- <a class="mt-3 text-gray-500 inline-flex items-center">Saiba mais
+                        <a href="{{ route('register') }}"
+                            class="mt-3 text-gray-500 inline-flex items-center font-semibold underline">Register now
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg>
-                        </a> --}}
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="p-4 lg:px-32 flex flex-col mx-auto text-center items-center">
-                <div class="flex bg-opacity-60 bg-white rounded-lg p-8 lg:px-24 flex-col">
-                    <div class="w-24 h-24 mb-4 mx-auto inline-flex items-center justify-center flex-shrink-0">
+                <div class="flex py-12 bg-opacity-60 bg-white rounded-lg p-8 lg:px-24 flex-col">
+                    <div class="w-24 h-24 mb-8 mx-auto inline-flex items-center justify-center flex-shrink-0">
                         <svg viewBox="0 0 24 24">
                             <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".22"
                                 d="M14.404643 22.04907c-.503642-.127679-.812722-.596083-.778982-1.180503.02055-.356315.107339-.575553.307136-.776147.203502-.204295.429489-.293169.743163-.292264.210423.000602.31548.02314.484859.104008.372336.177699.602421.631011.567036 1.117146-.03703.508645-.263146.83965-.676886.990916-.178032.06513-.469468.08172-.646338.0369zm.543337-.265608c.05943-.02055.144603-.07702.215797-.142957.198823-.184076.280207-.429069.259814-.782114-.01883-.326849-.128681-.555039-.331824-.689601-.287994-.190774-.675027-.157902-.932204.07911-.17552.161788-.248063.40267-.231322.768099.0156.338944.109319.535908.325942.684165.196247.13435.456383.165565.693797.0832zM3.6313888 19.655736c-1.2093939-.693792-2.2240925-1.279923-2.2548891-1.302514l-.056089-.04111V13.14042l.045811-.04247c.025135-.02341 1.0215732-.607313 2.2141682-1.297708l2.1684192-1.255262.00512-2.3187302c.00491-2.2472045.00406-2.3176874-.032194-2.2849546-.020554.018573-.056337.033801-.079614.033801-.061164 0-2.7100851-1.5438022-2.7478759-1.6014766-.02823-.043088-.027982-.052622.0021-.098557.018325-.027982.052498-.050888.076022-.050888.040612 0 2.6751186 1.5169331 2.7523643 1.5848482.035658.031326.036896.025259.03182-.1534687-.00341-.1158909.00341-.1965564.017458-.213779.012627-.015106.079118-.059308.1477856-.097937.068717-.038629.112795-.073918.097937-.078499-.084065-.025878-3.1006835-1.8106539-3.1262339-1.8496518-.027488-.04185-.027115-.052003.00277-.097567.018325-.028107.052868-.050887.077012-.050887.02402 0 .7436947.4099391 1.5992999.9109566 1.3804023.8083387 1.5569055.9172834 1.5668701.9671065.00619.03083.015353.056212.020306.056212.00491 0 .5965282-.3401569 1.3145327-.755903 1.1531141-.6676848 1.3115551-.7537734 1.3576132-.7376898.06463.022535.083204.1271822.030459.1719047-.018564.015848-.676493.4012102-1.461875.8563665l-1.4279697.8275672-.00512 2.4834962c-.00406 1.9714928.0001026 2.4877208.020306 2.5039908.06463.05188 4.2640286 2.4766 4.2909846 2.477606.01684.000626.661803-.369192 1.433365-.821835 1.366782-.801826 1.404185-.822218 1.455752-.793407.065.0364.07949.119731.02848.163845-.02005.01733-.627542.377388-1.349819.799981-.722282.422602-1.347596.790531-1.389588.817635l-.07639.04928v4.960897l1.389582.799512c.764275.439728 1.405615.81365 1.425212.830947.05164.04557.04458.1201-.01497.159177-.04742.03096-.0556.03058-.127258-.0066-.0421-.02203-.683049-.389312-1.424269-.816275l-1.347468-.776405-2.2013667 1.261989c-1.210751.694096-2.2122386 1.261475-2.2255289 1.260844-.01322-.00063-1.0136697-.568795-2.2230637-1.262587zm4.4074898-.222475 2.1383024-1.225591-.000214-2.487082-.000212-2.487083-2.1418891-1.241971c-1.1780392-.683087-2.1572908-1.241971-2.1761169-1.241971-.018819 0-.9972679.558764-2.1743314 1.241705l-2.1401041 1.241706.00512 2.491156.00512 2.491154 2.1378171 1.228541c1.1757969.675696 2.1536307 1.225497 2.1729609 1.221782.019439-.0037.9973793-.55827 2.1734474-1.232344zm-2.2892898.509748c-.085556-.09459-.1182433-.07293 1.8407601-1.218217 1.0191584-.59581 1.870113-1.083295 1.8910068-1.083295.058069 0 .1123006.07119.097937.128508-.00979.03925-.3730546.259542-1.8642008 1.130803-1.018589.595154-1.8694061 1.082106-1.8907085 1.082106-.02142 0-.054974-.01796-.074783-.03986zm-3.5446107-2.025021c-.038629-.02823-.039621-.07726-.044821-2.171508-.00471-1.898977-.00178-2.148042.025878-2.190363.039744-.0608.1414834-.06561.17214-.0083.014116.02649.021173.745082.021173 2.185565 0 2.053326-.00161 2.147637-.037268 2.179875-.045688.04136-.085185.04271-.1370262.0049zm7.0962217-4.232059c-.7361124-.42133-3.5013274-2.045696-3.5370863-2.077778-.025134-.02253-.045811-.0572-.045811-.07676 0-.04928.054974-.0998.1083381-.0993.024392.000209.8735273.485107 1.8869494 1.07755 1.9564343 1.143717 1.9299998 1.126198 1.8431522 1.222155-.052745.05819-.083327.05287-.2555541-.04582zm6.8455812 6.333622c-.04458-.04458-.0286-.13273.03156-.17463.167832-.116754 1.429954-.839303 1.466098-.839303.05212 0 .106735.05114.106735.100048 0 .01981-.01833.05287-.04099.07317-.07528.06822-1.454297.865097-1.496938.865097-.02316 0-.05299-.01103-.06648-.0244zm6.735146-.10734c-.167471-.05435-.297503-.197955-.334498-.369452-.01174-.05485-.0072-.06525.03318-.07601.121583-.03257.148899-.01895.197483.0983.09324.224997.351241.276492.523281.104495.133745-.133735.136493-.329968.0066-.46926-.07591-.08135-.07887-.08246-.220887-.08246-.142387 0-.143972-.000592-.144009-.05435 0-.09125.02005-.118733.08729-.118733.03442 0 .100783-.01846.147511-.04111.242171-.117252.180832-.457435-.08704-.483177-.15748-.01511-.283722.0738-.32218.227102-.01362.05448-.0177.05608-.108217.04271-.05174-.0077-.0977-.01745-.102028-.02179-.01833-.01796.06872-.201695.127424-.268566.08606-.09807.200136-.146375.346535-.14692.224117-.00084.388233.08877.462658.252607.07478.164736.02464.382279-.105122.456135-.03281.0187-.05956.03851-.05931.04419.000223.0056.03727.02724.08246.04804.161839.07466.241601.298852.183333.515267-.02971.110198-.180559.277433-.289738.321128-.119973.04804-.313774.05806-.424687.02203zm-3.987425-.428824c-.07107-.01547-.167942-.0468-.215327-.06971-.307086-.148653-.509648-.515194-.534868-.9679-.04062-.730224.369526-1.210279 1.03502-1.211183.309834-.000426.554629.1076.709818.313215.08877.11762.172227.296883.14817.318303-.0182.01609-.191592.06041-.236388.06041-.01622 0-.05299-.04828-.08185-.107352-.06252-.127769-.153891-.225826-.266786-.286261-.11775-.06302-.445871-.06315-.583836-.000102-.27846.127104-.424068.409394-.424773.823543-.000742.433452.1263.702303.392482.830575.165156.07961.316804.09682.480922.05485.250577-.06413.379716-.200692.476885-.504077.01-.03132.02068-.03119.149594.0015.161765.04099.163474.04778.06686.261038-.181153.399651-.621649.590337-1.115907.483076zm1.564562-1.108899v-1.099454H20.744099v.895852h1.160543v-.895852H22.189663v2.198905H21.904642v-1.038373h-1.160543v1.038373H20.459064zm-6.08556-6.567878c-.54408-.146312-.849595-.73026-.725184-1.386109.104862-.5525868.562602-.9022527 1.119523-.855104.268393.022657.484302.1223292.653693.301638.218335.231101.30321.467105.302765.841819-.000212.176362-.01043.278002-.03703.365415-.11775.388382-.365491.638477-.728144.73499-.139144.03702-.443221.03565-.585646-.0026zm.645856-.293033c.27472-.14698.410137-.412699.410137-.804734 0-.488525-.229727-.8129825-.626578-.8849439-.300511-.05448-.627333.0915-.76306.3408629-.08766.161121-.121583.346707-.112414.615658.0072.209631.01449.248559.0702.367446.148145.316606.366753.452407.709571.440805.162916-.0055.197523-.01387.312039-.07516zm1.117392.292155c-.0078-.0079-.01424-.507629-.01424-1.11046V9.5992122h.305402v.9162068H17.568077v-.9162068h.285022V11.82033l-.137435-.006-.137435-.006-.0053-.52427-.0053-.52427H16.42879l-.0053.52427-.0053.52427-.133201.0059c-.0733.0032-.139688-.000561-.147624-.0085zM1.1393989 4.1715474c-.16544152-.0445735-.30407725-.1269972-.44159863-.2628098-.20568141-.2031185-.3133138-.4865557-.31320235-.824769.0001857-.6136024.3304374-1.0517836.86005608-1.1411038.5715673-.0964018 1.0619985.2194003 1.2094745.7788335.041602.1578642.046183.5117894.00871.6676849-.096823.4022502-.3626171.6849694-.7377765.7848261-.1391433.037021-.4432205.035658-.585645-.00256zm.5193792-.2421945c.3156664-.093728.5035184-.3645115.5308691-.7651768.0362778-.5321198-.2020536-.9021657-.6290296-.9765165-.4100382-.0714413-.76860647.1830974-.85120348.6041923-.0376397.191678-.0173341.5598296.0386303.7034178.0496498.1271704.18739401.2942589.30000378.3638552.1607242.0993.4144707.1285077.6107176.070203zM9.3831382 3.07378V1.9641511h.2842546l.00555.4530143.00555.4530144.5751702.00535.575182.00535V1.964005h.285026v2.2192602h-.285024V3.1239041l-.575183.00535-.5751825.00535-.00535.5242698-.00535.52427h-.2843276Z" />
                         </svg>
                     </div>
                     <div class="flex-grow">
-                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
-                            O que é Metabolômica?
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-8">
+                            What is metabolomics?
                         </h2>
                         <p class="leading-relaxed text-base">
-                            Metabolômica é um método analítico com potencial de elucidar, de forma holística, os
-                            metabólitos que um organismo produz.
-                            A descoberta de metabólitos produzidos pelas espécies de plantas da Mata Atlântica pode
-                            significar avanços importantes, por sua potencial relevância bioeconômica, com
-                            aplicabilidade
-                            nos setores da agricultura, da nutrição, da medicina, da farmácia, dentre muitas outras
-                            indústrias.
-                            Não obstante, o desenvolvimento econômico sustentável <b>depende da conservação da
-                                biodiversidade.</b>
+                            Metabolomics is an analytical method with the potential to holistically elucidate the metabolites that an organism produces. The discovery of metabolites produced by plant species from the Atlantic Forest can mean important advances, due to their potential bioeconomic relevance, with applicability in the sectors of agriculture, nutrition, medicine, pharmacy, among many other industries. Nevertheless, sustainable economic development <strong>depends on the conservation of biodiversity.</strong>
                         </p>
-                        {{-- <a class="mt-3 text-gray-500 inline-flex items-center">Saiba mais
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                            </svg>
-                        </a> --}}
                     </div>
                 </div>
             </div>
             <div class="p-4 lg:px-32 flex flex-col mx-auto text-center items-center">
-                <div class="flex bg-opacity-60 bg-white rounded-lg p-8 lg:px-24 flex-col">
-                    <div class="w-24 h-24 mb-4 mx-auto inline-flex items-center justify-center flex-shrink-0">
+                <div class="flex py-12 bg-opacity-60 bg-white rounded-lg p-8 lg:px-24 flex-col">
+                    <div class="w-24 h-24 mb-8 mx-auto inline-flex items-center justify-center flex-shrink-0">
                         <svg version="1.2" viewBox="0 0 20 20">
                             <defs>
                                 <linearGradient id="b">
@@ -3316,41 +3310,22 @@
                         </svg>
                     </div>
                     <div class="flex-grow">
-                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
-                            O que é Modelagem Ecológica?
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-8">
+                            What is Ecologial Modeling?
                         </h2>
                         <p class="leading-relaxed text-base">
-                            É uma técnica analítica no âmbito da biogeografia, em que pontos de distribuição conhecidos
-                            das espécies são utilizados para gerar modelos e mapas de sua adequabilidade ambiental
-                            potencial, em
-                            um recorte de área que pode ir além de sua distribuição já conhecida.
-                            Ao se cruzar os dados de um modelo como esse com as áreas de Unidades de Conservação,
-                            podemos descobrir se os locais adequados para a presença das espécies estudadas estão ou não
-                            cobertos
-                            por alguma esfera legal de proteção ambiental.
-                            Além disso, os modelos podem apoiar iniciativas de restauração florestal e o cultivo
-                            responsável e sustentável, dentro de Reservas Particulares do Patrimônio Natural (RPPNs),
-                            por exemplo.
-                            Agricultores familiares e comunidades tradicionais podem tirar proveito desse tipo de
-                            informação para incrementar sua renda ao mesmo tempo em que ajudam à conservar espécies
-                            nativas com potencial bioeconômico do bioma Mata Atlântica.
+                            It is an analytical technique in the field of biogeography, in which the known distribution of the species is used to generate models and maps of their potential environmental suitability, in regions that can go beyond their already known distribution. By crossing the data of a model like this with maps of Protected Areas, we can find out if suitability hotspots of the studied species are covered or not by the spheres of legal environmental protection. In addition, models can support forest restoration initiatives and responsible and sustainable cultivation, within Private Natural Reserves, for example. Familial farmers and traditional communities can take advantage of this type of information to increase their income while helping to conserve native species with bioeconomic potential within the Atlantic Forest biome.
                         </p>
-                        {{-- <a class="mt-3 text-gray-500 inline-flex items-center">Saiba mais
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                            </svg>
-                        </a> --}}
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Section 6 -->
-    <div id="section-6" class="mt-10 mx-4 lg:mx-[25rem]">
+    <div id="section-6" class="mt-20 mx-4 lg:mx-[25rem]">
         <div>
             <p class="text-xl font-bold py-4">
-                Contato
+                Contact
             </p>
         </div>
         <form method="POST" action="{{ url('contato/send') }}">
@@ -3358,36 +3333,36 @@
             <div class="grid grid-cols-1 gap-6">
                 <div class="col-span-1">
                     <label for="name" class="block text-sm font-medium text-gray-700">
-                        Nome
+                        Name
                     </label>
                     <div class="mt-1 flex rounded-md shadow-sm">
                         <input type="text" name="name" id="name"
                             class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-md sm:text-sm border-gray-300"
-                            placeholder="Nome">
+                            placeholder="Name">
                     </div>
                 </div>
                 <div class="col-span-1">
                     <label for="email" class="block text-sm font-medium text-gray-700">
-                        E-mail
+                        Email
                     </label>
                     <div class="mt-1 flex rounded-md shadow-sm">
                         <input type="text" name="email" id="email"
                             class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-md sm:text-sm border-gray-300"
-                            placeholder="E-mail">
+                            placeholder="Email">
                     </div>
                 </div>
                 <div class="col-span-1">
                     <label for="msg" class="block text-sm font-medium text-gray-700">
-                        Mensagem
+                        Message
                     </label>
                     <div class="mt-1">
                         <textarea id="msg" name="msg" rows="3"
-                            class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
-                            placeholder="Sua mensagem"></textarea>
+                            class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md">
+                        </textarea>
                     </div>
                 </div>
                 <button class="mt-2 p-2 bg-gray-800 rounded-md text-white w-16">
-                    Enviar
+                    Send
                 </button>
             </div>
         </form>
@@ -3403,7 +3378,7 @@
     <footer class="text-gray-600">
         <div class="container px-5 py-20 mx-auto flex flex-wrap flex-col">
             <div class="flex-shrink-0 mx-auto text-center mb-10">
-                <a class="flex font-medium items-center justify-center text-gray-900">
+                <div class="flex font-medium items-center justify-center text-gray-900 mb-8">
                     <svg id="mini-logo" viewBox="0 0 6.35 6.17" class="w-20">
                         <g stroke="#000" stroke-linecap="round" stroke-linejoin="round"
                             paint-order="stroke fill markers">
@@ -3415,10 +3390,10 @@
                                 d="M4 3.6c-.2-.04-.5-.16-.5-.2l.15-.16c.38-.38.62-.74.7-1 .1-.36-.1-.78-.66-1.38L3.54.69l.12-.06a1.57 1.57 0 012.18 1.11c.05.22.03.57-.03.76-.18.54-.57.92-1.1 1.07-.17.05-.55.07-.72.03z" />
                         </g>
                     </svg>
-                    <span class="ml-3 text-xl font-quicksand font-semibold">BioOmiteca <br> Mata Atântica</span>
-                </a>
+                    <span class="ml-3 text-xl font-quicksand font-semibold">BioOmiteca <br> Atlantic Forest</span>
+                </div>
                 <p class="mt-2 text-sm text-gray-500 font-quicksand italic text-center">
-                    "O desenvolvimento econômico sustentável depende da conservação da biodiversidade."
+                    "The sustainable economic development depends on the conservation of the biodiversity."
                 </p>
             </div>
             <div class="flex flex-wrap mt-10 text-center">
@@ -3576,8 +3551,8 @@
         <div class="bg-white">
             <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col">
                 <p class="py-3 text-gray-500 text-sm text-center">
-                    Ilustração: "<span class="italic">Vanilla edwalii</span>"<br>
-                    Autora: Jessica Sindra
+                    Desktop view illustration: "<span class="italic">Vanilla edwalii</span>"<br>
+                    Artist: Jessica Sindra
                 </p>
                 <p class="py-3 mx-auto">
                     <svg id="joaninha" viewBox="0 0 96.17 54.71" class="w-10">
@@ -3740,6 +3715,22 @@
             }
             lastScroll = currentScroll;
         });
+
+        try {
+
+            window.onload = function() {
+
+                setTimeout(() => {
+                    var translateBar = document.getElementById(":1.container");
+                    translateBar.parentNode.removeChild(translateBar);
+
+                }, 1000);
+
+            }
+
+        } catch(err) {
+            console.log("Translate bar closed.");
+        }
 
     </script>
 

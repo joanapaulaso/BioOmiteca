@@ -26,7 +26,7 @@ use App\Http\Controllers\ContatoControllerLogged;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::post('contato/send', [ContatoController::class, 'send']);
 Route::post('contato-logged/send', [ContatoControllerLogged::class, 'send']);
