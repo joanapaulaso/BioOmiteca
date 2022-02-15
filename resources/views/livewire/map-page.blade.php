@@ -1,4 +1,7 @@
 <div class="mt-20 mb-20 px-4 md:px-48">
+    <div class="p-5 mb-16 bg-gradient-to-br from-fuchsia-100 via-teal-100 to-cyan-100 rounded-md shadow-md text-justify">
+        Warning: the data herein shown has only demonstrative purposes. These results reflect only the methodological prototype developed in this project. Once the results are properly peer reviewed and ready to be publish, they will be posted here and this warning will be removed. Please, do not share these information out of this context, since it is only demonstrative.
+    </div>
     <div class="text-2xl font-mono font-semibold mb-4">
         Modelagem ecológica da espécie <span class="italic">{{ $species }}</span>
     </div>
