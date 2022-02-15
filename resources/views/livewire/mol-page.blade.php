@@ -50,34 +50,34 @@
         <div class="block mx-auto text-center py-3">{{ $ion_mode }}</div>
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Approach (targeted/untargeted)</div>
         <div class="block mx-auto text-center py-3">{{ $approach }}</div>
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Órgão vegetal</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Plant organ</div>
         <div class="block mx-auto text-center py-3">{{ $plant_organ }}</div>
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Resumo da extração</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Extraction summary</div>
         <div class="block mx-auto text-center py-3">{{ $extraction_summary }}</div>
     </div>
     <div class="mt-10 text-2xl font-mono font-semibold mb-4 text-center">
         Metadados do projeto
     </div>
     <div class="flex-none w-full">
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Instituição</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Institution</div>
         <div class="block mx-auto text-center py-3">{{ $institution }}</div>
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Responsável</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Submitting user</div>
         <div class="block mx-auto text-center py-3">{{ $responsavel }}</div>
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Coordenação do Projeto</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Coordination</div>
         <div class="block mx-auto text-center py-3">{{ $coordination }}</div>
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Nome popular da espécie</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Species popular name</div>
         <div class="block mx-auto text-center py-3">{{ $species_popular }}</div>
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Família (taxonomia vegetal)</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Family (taxonomy)</div>
         <div class="block mx-auto text-center py-3">{{ $family }}</div>
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Cadastro no SISGEN</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">SISGEN ID</div>
         <div class="block mx-auto text-center py-3">{{ $SISGEN }}</div>
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Publicação (link)</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Publication (link)</div>
         <div class="block mx-auto text-center py-3">
             <a href="{{ $publication_mols }}" target="_blank" class="text-red-700 underline">
                 {{ $publication_mols }}
             </a>
         </div>
-        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Repositório de dados (link)</div>
+        <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Raw data repository link</div>
         <div class="block mx-auto text-center py-3">
             <a href="{{ $repository_mols }}" target="_blank" class="text-red-700 underline">
                 {{ $repository_mols }}
@@ -85,7 +85,7 @@
         </div>
     </div>
     <div class="mt-10 text-2xl font-mono font-semibold mb-4 text-center">
-        Mais sobre a espécie
+        More about this species
     </div>
     <iframe src="{{ $world_flora_link }}" style="border:0px #ffffff none;" name="species" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="500px" width="100%" allowfullscreen></iframe>
     {{-- <div class="block">
