@@ -3,14 +3,14 @@
         Warning: the data herein shown has only demonstrative purposes. These results reflect only the methodological prototype developed in this project. Once the results are properly peer reviewed and ready to be publish, they will be posted here and this warning will be removed. Please, do not share these information out of this context, since it is only demonstrative.
     </div>
     <div class="text-2xl font-mono font-semibold mb-4">
-        Modelagem ecológica da espécie <span class="italic">{{ $species }}</span>
+        Ecological modelling of the species <span class="italic">{{ $species }}</span>
     </div>
     <div class="mt-10 text-2xl font-mono font-semibold mb-4 text-center">
-        Resumo da modelagem
+        Modelling summary
     </div>
     <div class="block mx-auto text-center py-3">{{ $maps_abstract }}</div>
     <div class="mt-10 text-2xl font-mono font-semibold mb-4 text-center">
-        Metadados do experimento
+        Experiment metadata
     </div>
     <div class="flex-none w-full">
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Variáveis com maior contribuição para o modelo</div>
@@ -21,7 +21,7 @@
         <div class="block mx-auto text-center py-3">{{ $ensemble }}</div>
     </div>
     <div class="mt-10 text-2xl font-mono font-semibold mb-4 text-center">
-        Efetividade de Unidades de Conservação - percentual de área de hotspots com cobertural legal
+        Effectiveness of Protected Areas (% of hotspot areas with legal protection)
     </div>
     <div class="flex-none w-full">
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Total</div>
@@ -40,7 +40,7 @@
                 <img src="../../maps/{{ $map1_file }}" alt="Mapa 1">
             </a>
             <div class="text-center text-sm font-semibold">
-                Clique no mapa para ampliar
+                Click on the map to zoom in
             </div>
         </div>
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Mapa 1 - Descrição e análise</div>
@@ -53,7 +53,7 @@
                 <img src="../../maps/{{ $map2_file }}" alt="Mapa 2">
             </a>
             <div class="text-center text-sm font-semibold">
-                Clique no mapa para ampliar
+                Click on the map to zoom in
             </div>
         </div>
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Mapa 2 - Descrição e análise</div>
@@ -66,7 +66,7 @@
                 <img src="../../maps/{{ $map3_file }}" alt="Mapa 3">
             </a>
             <div class="text-center text-sm font-semibold">
-                Clique no mapa para ampliar
+                Click on the map to zoom in
             </div>
         </div>
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Mapa 3 - Descrição e análise</div>
@@ -79,7 +79,7 @@
                 <img src="../../maps/{{ $map4_file }}" alt="Mapa 4">
             </a>
             <div class="text-center text-sm font-semibold">
-                Clique no mapa para ampliar
+                Click on the map to zoom in
             </div>
         </div>
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Mapa 4 - Descrição e análise</div>
@@ -92,14 +92,14 @@
                 <img src="../../maps/{{ $map5_file }}" alt="Mapa 5">
             </a>
             <div class="text-center text-sm font-semibold">
-                Clique no mapa para ampliar
+                Click on the map to zoom in
             </div>
         </div>
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Mapa 5 - Descrição e análise</div>
         <div class="block mx-auto text-center py-3">{{ $map5_desc }}</div>
     </div>
     <div class="mt-10 text-2xl font-mono font-semibold mb-4 text-center">
-        Metadados do projeto
+        Project's metadata
     </div>
     <div class="flex-none w-full">
         <div class="block h-8 mt-12 pt-2 pb-8 text-center font-semibold align-center rounded-md bg-gradient-to-r from-cyan-100 via-purple-100 to-blue-50">Instituição</div>
@@ -120,7 +120,7 @@
         <div class="block mx-auto text-center py-3">{{ $repository_maps }}</div>
     </div>
     <div class="mt-10 text-2xl font-mono font-semibold mb-4 text-center">
-        Mais sobre a espécie
+        More about this species
     </div>
     <iframe src="{{ $world_flora_link }}" style="border:0px #ffffff none;" name="species" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="500px" width="100%" allowfullscreen></iframe>
 </div>
