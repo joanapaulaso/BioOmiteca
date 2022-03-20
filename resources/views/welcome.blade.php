@@ -318,7 +318,7 @@
     </section>
     <!-- Section 3 -->
     <section id="section-3" class="mt-10 lg:mt-52">
-        <div id="grid-section-3" class="relative mt-20" data-aos="fade-up" data-aos-duration="1000">
+        <div id="grid-section-3" class="relative mt-20">
             <div class="mx-auto">
                 <iframe class="welcome-video" src="https://www.youtube.com/embed/Rz3qYqJ5MlI"
                     title="YouTube video player" frameborder="0"
@@ -3228,8 +3228,7 @@
     </section>
     <!-- Section 5 -->
     <section id="section-5" class="relative flex flex-wrap mx-auto mt-0 pb-24 h-[fit-content]">
-        <div id="grid-section-3" class="relative flex flex-wrap mx-auto mt-20 space-y-2" data-aos="fade-up"
-            data-aos-duration="1000">
+        <div id="grid-section-3" class="relative flex flex-wrap mx-auto mt-20 space-y-2">
             <div class="p-4 lg:px-32 flex flex-col mx-auto text-center items-center">
                 <div class="flex py-12 bg-opacity-60 bg-white rounded-lg p-8 lg:px-24 flex-col">
                     <div class="w-16 h-16 mb-8 mx-auto inline-flex items-center justify-center flex-shrink-0">
@@ -3611,10 +3610,6 @@
         </div>
     </footer>
 
-    <script src="js/gsap.min.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/rellax.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script>
@@ -3631,66 +3626,6 @@
         $(document).click(function () {
             $("#menu-box").hide(100);
         });
-
-        //AOS JS
-        AOS.init();
-
-        //Rellax JS
-        var rellax = new Rellax('.rellax');
-
-        //GSAP JS
-        let tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: "body",
-            }
-        });
-
-        tl.from(".lp-header", {
-            y: -20,
-            opacity: 0,
-            duration: 0.5,
-            ease: "slow"
-        })
-            .from("#section-2-1-title", {
-                x: 20,
-                opacity: 0,
-                duration: 0.5,
-                ease: "circ"
-            })
-            .from("#section-2-1-subtitle", {
-                x: -20,
-                opacity: 0,
-                duration: 0.5,
-                ease: "circ"
-            })
-            .from("#video-box", {
-                x: 10,
-                opacity: 0,
-                duration: 1.5,
-                ease: "circ"
-            })
-            .from("#section-1-circle-arrow", {
-                y: 10,
-                opacity: .5,
-                duration: 1,
-                ease: "slow",
-                yoyo: true,
-                repeat: -1
-            }, "-=2")
-            .from("#plant-left", {
-                rotate: 2,
-                duration: 5,
-                ease: "slow",
-                yoyo: true,
-                repeat: -1
-            })
-            .from("#plant-right", {
-                rotate: 2,
-                duration: 4,
-                ease: "slow",
-                yoyo: true,
-                repeat: -1
-            })
 
         // SCROLL
         const body = document.body;
