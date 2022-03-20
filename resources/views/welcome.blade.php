@@ -18,6 +18,10 @@
         body {
             background: #ffffff;
         }
+
+        [x-cloak] {
+            display: none !important;
+        }
     </style>
     <link href="css/app.css" rel="stylesheet">
 
@@ -27,10 +31,11 @@
 
     <!-- Mobile header -->
     <section id="mobile-header" class="scroll-up-nav">
-        <div class="flex">
+        <div x-data="{ mobile: false }" class="flex">
             <div class="flex-auto relative">
                 <div class="drop-box">
                     <button
+                        x-on:click="mobile = ! mobile"
                         class="float-left m-5 rounded-md focus:outline-none focus-within:ring-2 focus-within:ring-blue-300">
                         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -39,7 +44,10 @@
                     </button>
                 </div>
                 <div id="menu-box"
-                    class="absolute hidden top-20 left-0 shadow-lg bg-white pb-10 pl-5 pr-10 transition-opacity rounded-br-2xl">
+                    x-cloak
+                    x-show="mobile"
+                    x-transition
+                    class="absolute z-50 top-20 left-0 shadow-lg bg-white pb-10 pl-5 pr-10 transition-opacity rounded-br-2xl">
                     <div class="uppercase font-quicksand text-md font-semibold hover:text-blue-700 mx-5 mt-5">
                         <a href="#section-6">
                             contact
@@ -82,6 +90,11 @@
                             @endauth
                         </div>
                         @endif
+                    </div>
+                    <div x-on:click="mobile = ! mobile" class="w-full mt-5 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto hover:text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -3610,23 +3623,7 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
     <script>
-        //Mobile menu
-        $(".drop-box").click(function (e) {
-            $("#menu-box").show(100);
-            e.stopPropagation();
-        });
-
-        $("#menu-box").click(function (e) {
-            e.stopPropagation();
-        });
-
-        $(document).click(function () {
-            $("#menu-box").hide(100);
-        });
-
         // SCROLL
         const body = document.body;
         let lastScroll = 0;
@@ -3650,22 +3647,6 @@
             }
             lastScroll = currentScroll;
         });
-
-        try {
-
-            window.onload = function() {
-
-                setTimeout(() => {
-                    var translateBar = document.getElementById(":1.container");
-                    translateBar.parentNode.removeChild(translateBar);
-
-                }, 1000);
-
-            }
-
-        } catch(err) {
-            console.log("Translate bar closed.");
-        }
 
     </script>
 

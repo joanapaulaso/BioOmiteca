@@ -1,11 +1,10 @@
 {
     "/js/app.js": "/js/app.js?id=3c85adc835fa0f57bd2f",
-    "/css/app.css": "/css/app.css?id=e585745e0c24d7b4257e",
-    "/images/BR.pdf": "/images/BR.pdf?id=c3be62c660135533a71a",
-    "/images/BR.svg": "/images/BR.svg?id=357b3baaece0c3dff901",
-    "/images/Vedwalii_drawing.jpg": "/images/Vedwalii_drawing.jpg?id=b99e1d0788ad265bbfd1",
+    "/css/app.css": "/css/app.css?id=97fc0a92fc7be23044cf",
     "/images/apex.svg": "/images/apex.svg?id=9cac2a3b7e89ec85ea73",
     "/images/background.jpg": "/images/background.jpg?id=d47d9d1e63f6cda1d182",
+    "/images/BR.pdf": "/images/BR.pdf?id=c3be62c660135533a71a",
+    "/images/BR.svg": "/images/BR.svg?id=357b3baaece0c3dff901",
     "/images/bud_01.svg": "/images/bud_01.svg?id=007dba396d927d9e6a8f",
     "/images/cool-background.png": "/images/cool-background.png?id=ea35f96a22bf42316e6e",
     "/images/div-bg_01.svg": "/images/div-bg_01.svg?id=679d07391ab34addf6e3",
@@ -22,8 +21,8 @@
     "/images/leaf_03.svg": "/images/leaf_03.svg?id=b64c5b5fb58c627a1e75",
     "/images/leaf_04.svg": "/images/leaf_04.svg?id=89d6d558bb778d6a9e03",
     "/images/logo-CAPES.png": "/images/logo-CAPES.png?id=7b46bfb281c3923607cd",
-    "/images/logo-LIBV.png": "/images/logo-LIBV.png?id=b8e1c011beda2675da96",
     "/images/logo-dna.png": "/images/logo-dna.png?id=855f59a24e3b97201ec4",
+    "/images/logo-LIBV.png": "/images/logo-LIBV.png?id=b8e1c011beda2675da96",
     "/images/logo_BioOmiteca.png": "/images/logo_BioOmiteca.png?id=3aa48a6b510d3c7c0a20",
     "/images/logo_libv.pdf": "/images/logo_libv.pdf?id=a587596d0d6fccad2a58",
     "/images/ma-background.jpg": "/images/ma-background.jpg?id=7547afca6ce84739c50f",
@@ -62,5 +61,6 @@
     "/images/vanilla-edwalii_5.jpg": "/images/vanilla-edwalii_5.jpg?id=1266692569b158a4abcb",
     "/images/vanilla-edwalii_6.jpg": "/images/vanilla-edwalii_6.jpg?id=9777bb2c8ea9d050c437",
     "/images/vanilla-flower.png": "/images/vanilla-flower.png?id=50bce0c1fb3260b72cf4",
-    "/images/vanillin.svg": "/images/vanillin.svg?id=a32bad8f300b4ae22fc0"
+    "/images/vanillin.svg": "/images/vanillin.svg?id=a32bad8f300b4ae22fc0",
+    "/images/Vedwalii_drawing.jpg": "/images/Vedwalii_drawing.jpg?id=b99e1d0788ad265bbfd1"
 }
